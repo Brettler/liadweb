@@ -1,6 +1,8 @@
-.App {
+/* .App {
   text-align: center;
 }
+
+
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +37,14 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+body {
+
+  background: url("backgroundBlue.jpg");
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+
+  background-repeat: no-repeat;
+
 }
