@@ -1,0 +1,96 @@
+
+#textPicContainer{
+    margin: auto 0;
+}
+
+
+
+.container {
+    height: 35vh;
+    max-width: 100%;
+  }
+#textContainer {
+    color: whitesmoke;
+
+
+}
+
+.iconL {
+
+    position: absolute;
+    left:0px;
+    height: 70x;
+    width: 70px;
+
+}
+#myPic {   
+    text-align: center;
+    max-width: 100%;
+    padding-right: 4%;
+}
+
+#menuBar {
+    margin-top: 1%;
+    padding-bottom: 4%;
+    align-content: center;
+}
+
+.title {
+    font-size: 6em;
+    font-family: 'Brush Script MT', cursive;
+}
+
+
+
+.intoMSG{
+    font-size: 2em;
+}
+
+
+
+@media (max-width: 767px) {
+
+    
+    .profilePic{
+        height: 9rem;
+        width: 9rem;
+        object-fit: cover;
+        border-radius: 100%;
+        border-color: black;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 3.5em;
+        font-weight: bold;
+    }
+
+    .intoMSG{
+        font-size: 1.7em
+    }
+
+}
+
+/* Phone settigns*/
+@media (max-width: 450px) {
+
+    
+    .profilePic{
+        height: 12vh;
+        width: 12vh;
+        object-fit: cover;
+        border-radius: 100%;
+        border-color: black;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    .intoMSG{
+        font-size: 1.5em
+    }
+
+}

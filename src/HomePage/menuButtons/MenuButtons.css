@@ -1,15 +1,5 @@
 
 
-.homePage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(14, 77, 146, 0.8); /* Yale */
-
-    min-height: 100vh;
-
-}
-
 #pillNav2 {
     --bs-nav-link-color: var(--bs-white);
     --bs-nav-pills-link-active-color: var(--bs-primary);
@@ -17,8 +7,8 @@
 
 }
 
-.menu {
+/* .menu {
     position: absolute;
     padding-top: 1vh;
     right: 6vh;
-}
+} */
