@@ -39,8 +39,9 @@
   }
 } */
 html, body {
-  height: 100%; /* Make sure the parent of the container has a defined height */
   margin: 0; /* Remove default margin */
+  min-width: 450px;
+
 }
 
 
@@ -49,6 +50,7 @@ body {
   background: url("backgroundBlue.jpg");
   background-attachment: fixed;
   background-size: 100vw 100vh;
+    min-width: 40vh;
 
   background-repeat: no-repeat;
 
