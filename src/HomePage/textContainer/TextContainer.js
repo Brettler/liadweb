@@ -27,20 +27,15 @@ function TextContainer() {
 
             // </>
 
-            <>
-            <div className='title' htmlFor='welcomeMSG'> {myName} </div> 
-            <div className='intoMSG' htmlFor='introMSG'>
+            <div id="welcomeText">
+                <div className='title' htmlFor='welcomeMSG'> {myName} </div> 
+                <div className='intoMSG' htmlFor='introMSG'>
 
-            <p>Full Stack Developer</p>
-        
-            </div> 
+                <p>Full Stack Developer</p>
+            
+                </div> 
 
-            </>
-
-
-
-
-
+            </div>
     );
 };
 
