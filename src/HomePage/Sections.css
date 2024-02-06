@@ -9,23 +9,3 @@
 
 }
 
-
-
-@keyframes slideInFromLeft {
-    from{
-        transform: translatey(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translatey(0);
-        opacity: 1;
-    }
-}
-
-.moving-element {
-    animation-fill-mode: forwards; /* Keep the container in the final state after animation completes */
-}
-
-.moving-element.slide-in {
-    animation: slideInFromLeft 3s ease-out;
-}
