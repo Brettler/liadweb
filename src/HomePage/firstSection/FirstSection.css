@@ -3,6 +3,7 @@
     min-height: 10vh;
     height: 50vh;
 
+
 }
 
 #menuContainer {
@@ -14,15 +15,12 @@
 
 #textPicRow {
     margin:0;
-    transition: transform 1s ease;
-    /* will-change: transform; */
 
 }
 
 
 #textContainer {
     color: whitesmoke;
-
 }
 
 #myPic {   
@@ -31,12 +29,7 @@
     padding-right: 4%;
 }
 
-#menuBar {
-    margin-top: 1vh;
-    padding-bottom: 1vh;
-    align-content: center;
 
-}
 
 
 
@@ -81,8 +74,8 @@
 
 }
 
-/* Phone settigns*/
-@media (max-width: 450px) {
+/* Wide Phone settigns*/
+@media (max-width: 545px) {
 
     #textPicContainer{
         margin: auto;
@@ -115,6 +108,45 @@
 
     .intoMSG{
         font-size: 1.5em
+    }
+
+}
+
+
+/* Phone settigns*/
+@media (max-width: 450px) {
+
+    #textPicContainer{
+        margin: auto;
+        min-height: 10vh;
+        height: 60vh;
+    }
+
+    #menuBar {
+        margin-top: 1vh;
+        padding-bottom: 5vh;
+        align-content: center;
+        padding-right: 5.6vh;
+        padding-left: 5vh;
+
+    }
+    
+    .profilePic{
+        height: 12vh;
+        width: 12vh;
+        object-fit: cover;
+        border-radius: 100%;
+        border-color: black;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2.6em;
+        font-weight: bold;
+    }
+
+    .intoMSG{
+        font-size: 1.2em
     }
 
 }
