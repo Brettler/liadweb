@@ -1,0 +1,15 @@
+.typingCursor {
+    margin:0;
+    padding:0;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0%;
+    }
+}
+
+.empty {
+    display: none;
+  }

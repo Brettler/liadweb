@@ -9,19 +9,26 @@ function Sections() {
 
     const ref = useRef(null);
     const [menuOpacity, setMenuOpacity] = useState(1);
-    
-
-
+    // const [firstLoadMenu, setFirstLoadMenu] = useState(true); // This state control the menu
 
 
     useEffect( () => {
+
+        const menuBar = ref.current;
+        menuBar.classList.add('initial'); // The name of the class that triger the animation.
+        setTimeout(() => {
+            menuBar.classList.remove('initial');
+        },1000); // The delay same as the animation duration.
+
+
+
         const handleMenuPosition = (() => {
 
             const scrollThreshPos = window.innerHeight * 0.2; // Define the hight in which when the user scroll under we set fixed to false.
             const currentScrollPos = window.scrollY;
     
             // Calculate opacity based on scroll position.
-            const opacity = Math.max(0, 1- currentScrollPos / scrollThreshPos+0.2);
+            const opacity = Math.max(0, 1- currentScrollPos / scrollThreshPos + 0.2);
 
             setMenuOpacity(opacity);
 
@@ -67,11 +74,11 @@ function Sections() {
         </div>
         <div className='section' id="secondSection">
 
-            <FirstSection/>
+            <SecondSection/>
         </div>
         <div className='section' id="thirdSection">
 
-        <FirstSection/>
+        {/* <FirstSection/> */}
         </div>
         </>
         
