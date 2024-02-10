@@ -1,9 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
-
-
-
-
-
+import {useRef, useEffect, useState} from 'react'
 
 function SecondSection() {
 

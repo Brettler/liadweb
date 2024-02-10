@@ -1,8 +1,8 @@
 
 import './Sections.css';
-import MenuButtons from './menuButtons/MenuButtons';
-import FirstSection from './firstSection/FirstSection';
-import SecondSection from './secondSection/SecondSection';
+import MenuButtons from '../menuButtons/MenuButtons';
+import FirstSection from '../firstSection/FirstSection';
+import SecondSection from '../secondSection/SecondSection';
 import { useEffect, useRef, useState } from 'react';
 
 function Sections() {
@@ -59,7 +59,7 @@ function Sections() {
                     style={{
                         opacity : menuOpacity,
                         position : 'fixed',
-                        transition: 'all 0.6s ease', // Smooth transition for all property changes
+                        transition: 'all 0.6s ease', 
 
                     }}>
                         <MenuButtons/>

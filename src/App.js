@@ -1,6 +1,5 @@
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
-import Sections from './HomePage/Sections';
-
+import PreLoadAnimation from './preLoadAnimation/PreLoadAnimation';
 
 import './App.css';
 
@@ -9,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Sections/>}/>
+        <Route path="/" element={<PreLoadAnimation/>}/>
       </Routes>
     </BrowserRouter>
 
