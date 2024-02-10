@@ -2,7 +2,7 @@ import './TextContainer.css'
 import { useCallback, useEffect, useState } from 'react';
 
 
-function TextContainer() {
+function TextContainer({setIsFinishTyping}) {
 
     const [titleText, setTitleText] = useState('');
     const [subtitleText, setSubtitleText] = useState('');
@@ -33,8 +33,9 @@ function TextContainer() {
             setShowSubtitleCursor(true);
             console.log(`Finsihed typing ${fullTitle}, starting ${fullSubtitle}`)
             await typeChars(fullSubtitle, setSubtitleText, setShowSubtitleCursor);
-            console.log(`Finished typing all text.`)
-            //}
+            console.log(`Finished typing all text.`);
+            setIsFinishTyping(true);
+          
         })();
     }, [typeChars]);
 
