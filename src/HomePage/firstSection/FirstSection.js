@@ -2,7 +2,7 @@
 import TextContainer from '../textContainer/TextContainer'
 import MyIMG from '../myIMG/MyIMG'
 import './FirstSection.css'
-import { useRef, useEffect, useState } from 'react'
+import {useState} from 'react'
 
 
 function FirstSection() {
