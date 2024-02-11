@@ -19,7 +19,7 @@ function TextContainer({setIsFinishTyping}) {
     const typeChars = useCallback(async (text, setText, setShowCursor) => { // async function to use the sleep function above.
         for (let i = 0; i < text.length; i++) {
             setText(text.substring(0,i+1));
-            console.log(`typing ${text[i]}`);
+            // console.log(`typing ${text[i]}`);
             await sleep(duration); // Wait for the duration before typing the next char.
         }
         setShowCursor(false); // Hide the cursor after typing the sentence.
@@ -31,9 +31,9 @@ function TextContainer({setIsFinishTyping}) {
             await sleep(500);
             await typeChars(fullTitle, setTitleText, setShowTitleCursor);
             setShowSubtitleCursor(true);
-            console.log(`Finsihed typing ${fullTitle}, starting ${fullSubtitle}`)
+            // console.log(`Finsihed typing ${fullTitle}, starting ${fullSubtitle}`)
             await typeChars(fullSubtitle, setSubtitleText, setShowSubtitleCursor);
-            console.log(`Finished typing all text.`);
+            // console.log(`Finished typing all text.`);
             setIsFinishTyping(true);
           
         })();

@@ -1,30 +1,49 @@
 
 
-.HomePageLoader {
+/* Intro Screen */
 
-    height: 100vh;
+.HomePageLoader {
     width: 100%;
+    height: 100vh;
     background: black;
     color: white;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 55;
+    position: fixed; /* Don't let the user scroll in this screen */
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    top: 0;
+    transition: 1s; /* The time the screen moves to the main homepage screen*/
 }
 
-.HomePageLoader .LoaderTextContainer {
-    display: flex;
-    align-items: center;
+.HomePageLoader.LoaderTextContainer {
+    /* display: flex;
+    align-items: center; */
+    text-align: center;
     justify-content: space-between;
-    height: 60px;
-    width: 288px;
-    font-size: 28px;
     font-weight: 800px;
-    overflow: hidden;
     color: white;
+    transform: translate(-50%, -50%);
+}
+
+.titleIntro {
+    position: relative;
+    display: inline-block;
+    font-size: 5rem;
+    bottom: -50px;
+    opacity: 0;
+}
+
+.titleIntro.activeAnimation {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.titleIntro.fadeAnimation {
+    bottom: 200px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+    
 }
