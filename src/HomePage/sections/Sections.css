@@ -20,7 +20,7 @@
     to {transform: translateY(0);}
 }
 
-#menuBar.initial {
+/* #menuBar.initial {
     animation: slideDown 1s ease forwards;
-}
+} */
 

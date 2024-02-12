@@ -1,7 +1,7 @@
 
 import './Sections.css';
 import MenuButtons from '../menuButtons/MenuButtons';
-import FirstSection from '../firstSection/FirstSection';
+import FirstSection from '../firstSectionHome/FirstSectionHome';
 import SecondSection from '../secondSection/SecondSection';
 import { useEffect, useRef, useState } from 'react';
 
@@ -14,13 +14,11 @@ function Sections() {
 
     useEffect( () => {
 
-        const menuBar = ref.current;
-        menuBar.classList.add('initial'); // The name of the class that triger the animation.
-        setTimeout(() => {
-            menuBar.classList.remove('initial');
-        },1000); // The delay same as the animation duration.
-
-
+        // const menuBar = ref.current;
+        // menuBar.classList.add('initial'); // The name of the class that triger the animation.
+        // setTimeout(() => {
+        //     menuBar.classList.remove('initial');
+        // },1000); // The delay same as the animation duration.
 
         const handleMenuPosition = (() => {
 
@@ -65,7 +63,6 @@ function Sections() {
                         <MenuButtons/>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -73,7 +70,6 @@ function Sections() {
             <FirstSection/>
         </div>
         <div className='section' id="secondSection">
-
             <SecondSection/>
         </div>
         <div className='section' id="thirdSection">
