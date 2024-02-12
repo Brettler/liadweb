@@ -1,7 +1,7 @@
 
 import TextContainer from '../textContainer/TextContainer'
 import MyIMG from '../myIMG/MyIMG'
-import './FirstSection.css'
+import './FirstSectionHome.css'
 import {useState} from 'react'
 
 
