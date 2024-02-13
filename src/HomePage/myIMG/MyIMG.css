@@ -1,11 +1,11 @@
 .profilePic{
-    max-height: auto;
+    /* max-height: auto; */
     height: 13rem;
     width: 13rem;
     object-fit: cover;
     border-radius: 100%;
     border-color: black;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .profilePicPulse{

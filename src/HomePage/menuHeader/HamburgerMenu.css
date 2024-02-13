@@ -1,0 +1,109 @@
+
+
+.burgerContainer {
+    display: flex;
+    position: relative;
+    top: 2vh;
+    right: 4vh;
+    width: 80px;
+    height: 80px;
+    background:black;
+
+    box-shadow: 
+                0 0 5px white,
+                0 0 5px white,
+                0 0 5px white,
+                0 0 5px white;
+    border-radius: 20%;
+    cursor: pointer;
+
+}
+
+.burgerIcon {
+    display: flex;
+    position: relative;
+    width: 50px;
+    height: 40px;
+    margin: auto;
+    align-items: center;
+    transform: rotate(0);
+    transition: 1s;
+}
+
+.burgerIcon.active {
+    display: flex;
+    position: relative;
+    width: 50px;
+    height: 40px;
+    margin: auto;
+    align-items: center;
+    transform: rotate(0);
+    transition: 1s;
+}
+
+.burgerContainer.active .burgerIcon {
+    transform: rotate(315deg);
+
+}
+
+.burgerIcon span {
+        position: absolute;
+        display: block;
+        height: 10px;
+        background: linear-gradient(45deg, rgb(140, 140, 140), gray);
+        border: 0.5px solid white;
+        border-radius: 10px;
+        box-shadow: 
+                    0 0 3px white,
+                    0 0 8px white;
+
+        transition: .3s;
+        transition-delay: 1s;
+
+}
+
+.burgerIcon span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 50%;
+    transform: translateY(0);
+
+}
+
+.burgerContainer.active span:nth-child(1){
+    width: 100%;
+    transform: translateY(14px);
+    transition-delay: 0s;
+
+}
+
+
+.burgerIcon span:nth-child(2) {
+    width: 100%;
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+.burgerContainer.active span:nth-child(2){
+    transform: scaleX(0); /* Disapear from x axsis*/
+    opacity: 0;
+    transition-delay: 0s;
+
+
+}
+
+.burgerIcon span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    transform: rotate(0);
+}
+
+
+.burgerContainer.active span:nth-child(3){
+    bottom: 15px;
+    width: 100%;
+    transform: rotate(90deg);
+    transition-delay: 0s;
+
+}
