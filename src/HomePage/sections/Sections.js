@@ -1,24 +1,20 @@
 
 import './Sections.css';
-import MenuButtons from '../menuButtons/MenuButtons';
+import NavbarMenu from '../menuHeader/NavbarMenu';
+import HamburgerMenu from '../menuHeader/HamburgerMenu';
 import FirstSection from '../firstSectionHome/FirstSectionHome';
 import SecondSection from '../secondSection/SecondSection';
 import { useEffect, useRef, useState } from 'react';
 
-function Sections() {
+function Sections({isLoadAniFinish, windowWidth}) {
 
     const ref = useRef(null);
     const [menuOpacity, setMenuOpacity] = useState(1);
     // const [firstLoadMenu, setFirstLoadMenu] = useState(true); // This state control the menu
 
 
-    useEffect( () => {
 
-        // const menuBar = ref.current;
-        // menuBar.classList.add('initial'); // The name of the class that triger the animation.
-        // setTimeout(() => {
-        //     menuBar.classList.remove('initial');
-        // },1000); // The delay same as the animation duration.
+    useEffect( () => {
 
         const handleMenuPosition = (() => {
 
@@ -53,21 +49,20 @@ function Sections() {
             {/* Container for the menu bar */}
             <div id ='menuContainer' className='container'>
                 <div className='row justify-content-end'>
-                    <div ref={ref} id='menuBar' className='col-xl-3 col-lg-4 col-md-5 col-sm-12'
+                    <div ref={ref} id='menuBar' className='col-xl-12 col-lg-4 col-md-5 col-sm-12 col-2'
                     style={{
                         opacity : menuOpacity,
                         position : 'fixed',
-                        transition: 'all 0.6s ease', 
-
+                        transition: 'all 0.6s ease',
                     }}>
-                        <MenuButtons/>
+                        {windowWidth < 500 ? <NavbarMenu/>: <HamburgerMenu/>}
                     </div>
                 </div>
             </div>
         </div>
 
         <div className='section' id="firstSection">
-            <FirstSection/>
+            <FirstSection isLoadAniFinish={isLoadAniFinish}/>
         </div>
         <div className='section' id="secondSection">
             <SecondSection/>

@@ -3,11 +3,12 @@ import './PreLoadAnimation.css'
 import Sections from '../HomePage/sections/Sections'
 
 
-function PreLoadAnimation() {
+function PreLoadAnimation({windowWidth}) {
 
     const refHomePageLoader = useRef(null);
     const [titleRefs, setTitleRefs] = useState([])
-
+    const [isLoadAniFinish, setIsLoadAniFinish] = useState(false);
+    
     useEffect(() => {
         
         setTimeout(() => { 
@@ -34,6 +35,8 @@ function PreLoadAnimation() {
                 }
             }, 2020);
 
+            setTimeout(() => setIsLoadAniFinish(true), 600); // When changed to true we triger the typing animation.
+        
         }, 500);
 
     }, [titleRefs]);
@@ -46,17 +49,18 @@ function PreLoadAnimation() {
 
     return (
         <>
-        <div ref={refHomePageLoader} className='HomePageLoader'>
+        {/* <div ref={refHomePageLoader} className='HomePageLoader'>
             <div className="LoaderTextContainer">
 
                 <span ref={setSameRef} className='titleIntro'>{'Liad Brettler'}</span>
-                <span ref={setSameRef} className='titleIntro'>{'Full Stack Devloper'}</span>
+                <span ref={setSameRef} className='titleIntro'>{'Software Devloper'}</span>
 
             </div>
 
-        </div>
+        </div> */}
         <div id="HomePageSections">
-            <Sections/>
+            <Sections isLoadAniFinish={isLoadAniFinish}
+                        windowWidth={windowWidth}/>
         </div>
         </>
     )

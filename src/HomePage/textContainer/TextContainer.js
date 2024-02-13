@@ -1,7 +1,10 @@
 import './TextContainer.css'
 import React, { useCallback, useEffect, useState } from 'react';
+import fullTextContent from './aboutMeText'
+//import '../firstSectionHome/FirstSectionHome.css'
 
-function TextContainer({setIsFinishTyping}) {
+
+function TextContainer({setIsFinishTyping, isLoadAniFinish}) {
 
     const [textState, setTextState] = useState({
         title : {text: '', cursor: true},
@@ -11,19 +14,7 @@ function TextContainer({setIsFinishTyping}) {
         s2: { text: '', cursor: false },
         s3: { text: '', cursor: false },
         s4: { text: '', cursor: false },
-        s5: { text: '', cursor: false },
     });
-
-    const fullTextContent = {
-        title: 'Hello, my name is',
-        name: 'Liad Brettler',
-        subTitle: `I'm a junior fullstack devloper.`,
-        s1: `Welcome to my site, where I share my journey into Full Stack Development.`,
-        s2: `I finished this year my B.Sc in Computational Biology from Bar-Ilan University,`,
-        s3: `were I found a keen interest in coding.`,
-        s4: `This space is dedicated to projects and ideas that reflect my growth as a developer and my enthusiasm for building web applications.`,
-        s5: `Let's dive into the world of development together.`,
-    }
 
     const duration = 10;
 
@@ -38,7 +29,8 @@ function TextContainer({setIsFinishTyping}) {
                     ...prevState,
                     [key]: {...prevState[key], text: text.substring(0, i+1)},
                 }));
-                await sleep(duration);
+                key === 'name' ? await sleep(50) : await sleep(duration);
+                
             }
 
             setTextState(prevState => ({
@@ -52,8 +44,8 @@ function TextContainer({setIsFinishTyping}) {
     }, [duration, setIsFinishTyping]);
 
     useEffect(() => {
-        typeChars();
-    },[typeChars]);
+        if(isLoadAniFinish) typeChars();
+    },[isLoadAniFinish, typeChars]); // typChars will run only when isLoadAniFinish change from false to true. that happends when the preload animation of the homepage is finished.
 
     const renderTextWithCursor = (key) => (
         <>
@@ -65,17 +57,17 @@ function TextContainer({setIsFinishTyping}) {
     return (
 
             <div id="welcomeText">
-                <div className='title typing'>
+                <div className='title typing typingContainer'>
                     {renderTextWithCursor('title')}
                 </div> 
-                <div className='myName typing'>
+                <div className='myName typing typingContainer'>
                     {renderTextWithCursor('name')}
                 </div> 
-                <div className='aboutMeMSG typing'>
+                <div className='aboutMeMSG typing typingContainer'>
                     {renderTextWithCursor('subTitle')}
                 </div> 
-                {[...Array(5).keys()].map( i => (
-                    <div key={i} className='information typing'>
+                {[...Array(4).keys()].map( i => (
+                    <div key={i} className='information typing typingContainer'>
                         {renderTextWithCursor(`s${i+1}`)}
                     </div>
                 ))}
