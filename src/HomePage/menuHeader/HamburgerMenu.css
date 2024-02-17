@@ -3,76 +3,69 @@
 .burgerContainer {
     display: flex;
     position: relative;
-    top: 2vh;
-    right: 4vh;
-    width: 80px;
-    height: 80px;
-    background:black;
-
-    box-shadow: 
-                0 0 5px white,
-                0 0 5px white,
-                0 0 5px white,
-                0 0 5px white;
-    border-radius: 20%;
+    top: 0;
+    right: 0;
+    width: 15vh;
+    height: 9vh;
     cursor: pointer;
+    z-index: 2000; /* Ensure the burger menu is above other elements on the page. */
 
 }
 
 .burgerIcon {
     display: flex;
-    position: relative;
-    width: 50px;
-    height: 40px;
-    margin: auto;
-    align-items: center;
-    transform: rotate(0);
-    transition: 1s;
+    position: relative; /* allow absolute positioning of span elements (the pattys of the burger icon) relative to this container. */
+    width: 6vh;
+    height: 6vh;
+    margin: auto; /* Centers the icon within the container */
+    align-items: center; /* Vertically aligns the spans in the center of the current element */
+    transform: rotate(0); /* Initalize state without rotation */
+    transition: 1s ease; /* Animate smoothly over 1 sec */
 }
 
 .burgerIcon.active {
     display: flex;
     position: relative;
-    width: 50px;
-    height: 40px;
+    width: 6vh;
+    height: 6vh;
     margin: auto;
     align-items: center;
     transform: rotate(0);
-    transition: 1s;
+    transition: 1s ease;
 }
 
 .burgerContainer.active .burgerIcon {
     transform: rotate(315deg);
-
 }
 
 .burgerIcon span {
         position: absolute;
         display: block;
-        height: 10px;
+        height: 0.7vh;
         background: linear-gradient(45deg, rgb(140, 140, 140), gray);
         border: 0.5px solid white;
         border-radius: 10px;
-        box-shadow: 
+        box-shadow:
                     0 0 3px white,
                     0 0 8px white;
 
-        transition: .3s;
+        transition: 0.3s;
         transition-delay: 1s;
+        
 
 }
 
 .burgerIcon span:nth-child(1) {
     top: 0;
     left: 0;
-    width: 50%;
+    width: 100%;
     transform: translateY(0);
 
 }
 
 .burgerContainer.active span:nth-child(1){
     width: 100%;
-    transform: translateY(14px);
+    transform: translateY(2.5vh);
     transition-delay: 0s;
 
 }
@@ -95,15 +88,132 @@
 .burgerIcon span:nth-child(3) {
     bottom: 0;
     right: 0;
-    width: 50%;
+    width: 100%;
     transform: rotate(0);
 }
 
 
 .burgerContainer.active span:nth-child(3){
-    bottom: 15px;
+    bottom: 2.5vh;
     width: 100%;
     transform: rotate(90deg);
     transition-delay: 0s;
 
+}
+
+
+
+/* Phone Settings */
+@media (max-width: 450px) {
+
+    .burgerContainer {
+        display: flex;
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 5vh;
+        height: 5vh;
+        background:none;
+    
+        box-shadow: none;
+        border-radius: 20%;
+        cursor: pointer;
+    
+    }
+    
+    .burgerIcon {
+        display: flex;
+        position: relative;
+        width: 6vh;
+        height: 4vh;
+        margin: auto;
+        align-items: center;
+        transform: rotate(0);
+        transition: 1s;
+    }
+    
+    .burgerIcon.active {
+        display: flex;
+        position: relative;
+        width: 5vh;
+        height: 5vh;
+        margin: auto;
+        align-items: center;
+        transform: rotate(0);
+        transition: 1s;
+    }
+
+    .burgerContainer.active .burgerIcon {
+        transform: rotate(315deg);
+    
+    }
+    
+    .burgerIcon span {
+            position: absolute;
+            display: block;
+            height: 0.6vh;
+            background: linear-gradient(45deg, rgb(140, 140, 140), gray);
+            border: 0.3px solid white;
+            border-radius: 10px;
+            box-shadow: 
+                        0 0 2px white,
+                        0 0 p6x white;
+    
+            transition: .3s;
+            transition-delay: 1s;
+    
+    }
+    
+    .burgerIcon span:nth-child(1) {
+        top: 0;
+        left: 0;
+        width: 50%; /* Length of the patty in the burger*/
+        transform: translateY(0);
+    
+    }
+    
+    .burgerContainer.active span:nth-child(1){
+        top: 0;
+
+        width: 100%;
+        transform: translateY(14px);
+        transition-delay: 0s;
+    
+    }
+    
+    
+    .burgerIcon span:nth-child(2) {
+        width: 100%;
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    
+    .burgerContainer.active span:nth-child(2){
+        transform: scaleX(0); /* Disapear from x axsis*/
+        opacity: 0;
+        transition-delay: 0s;
+    
+    
+    }
+    
+    .burgerIcon span:nth-child(3) {
+        bottom: 0;
+        right: 0;
+        width: 50%; /* Length of the patty in the burger*/
+        transform: rotate(0);
+    }
+    
+    
+    .burgerContainer.active span:nth-child(3) {
+        bottom: 17px;
+        width: 100%;
+        transform: rotate(90deg);
+        transition-delay: 0s;
+    
+    }
+
+    .navbar-toggler {
+        border:none;
+    }
+    
 }

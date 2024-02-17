@@ -1,30 +1,39 @@
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './HamburgerMenu.css'
 
-function HamburgerMenu() {
-    const refBurger = useRef(null);
 
-    useEffect( () => {
+// if isCanvasOpen is true -> isActive true and we will start the animation. 
+function HamburgerMenu({onClick, isActive}) {
+    // const refBurger = useRef(null);
 
-        const burgerAnimation = () => refBurger.current.classList.toggle('active');
+    // useEffect( () => {
+    //     const burgerClick = () => refBurger.current.classList.toggle('active');
+    //     refBurger.current.addEventListener('click', burgerClick);
 
-        refBurger.current.addEventListener('click', burgerAnimation);
+    //     return (() => {
+    //         refBurger.current.removeEventListener('click', burgerClick)
+    //     });
+    // }, []);
 
-        return () => refBurger.current.removeEventListener('click', burgerAnimation);
+    // const [isActive, setIsActive] = useState(false);
 
-    }, []);
-
-
+    // const handleClick = () =>{
+    //     setIsActive(!isActive); // Toggle the 'active' class for animation.
+    //     onClick();
+    // };
 
     return (
-        <div ref={refBurger} className='burgerContainer'>
+
+        <div className={`burgerContainer ${isActive ? 'active' : ''}`} onClick={onClick}>
             <div className="burgerIcon">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
+
+
     )
 }
 
