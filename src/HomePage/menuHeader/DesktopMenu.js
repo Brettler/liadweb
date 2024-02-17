@@ -1,34 +1,29 @@
-import './NavbarMenu.css'
+
+import './DesktopMenu.css'
 import HamburgerMenu from './HamburgerMenu';
-import React from 'react';
 import useOffcanvas from './useOffcanvas';
 
-function NavbarMenu() {
+function DesktopMenu({menuOpacity}) {
 
     const {canvasRef, isCanvasOpen, toggleCanvas} = useOffcanvas()
 
-    return(
+    return (
 
-        <nav id='navbarMenu' className="navbar navbar-dark bg-dark fixed-top">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">Home</a>
-                <button className="navbar-toggler" type="button" aria-label="Toggle navigation">
-                    {/* <span className="navbar-toggler-icon"></span> */}
-                    {<HamburgerMenu onClick={toggleCanvas}
-                                    isActive={isCanvasOpen}/>}
-                </button>
-                <div ref={canvasRef} className="offcanvas offcanvas-end text-bg-dark" tabIndex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div className="offcanvas-header">
-                        <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-                        {/* <button className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close">
+        <>
+            <button className="navbar-toggler" type="button" aria-label="Toggle navigation" style={{opacity: menuOpacity}}>
+                <HamburgerMenu onClick={toggleCanvas}
+                                isActive={isCanvasOpen}/>
+            </button>
 
-                            {<HamburgerMenu onClick={handleBurgerClick}
-                                            isActive={isCanvasOpen}/>}
-
-                        </button> */}
-                    </div>
-                    <div className="offcanvas-body">
-                        <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <div ref={canvasRef} class="offcanvas offcanvas-top text-bg-dark" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasTopLabel">Menu</h5>
+                    {/* <button type="button" class="btn-close .btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <HamburgerMenu/>
+                    </button> */}
+                </div>
+                <div class="offcanvas-body">
+                <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
@@ -53,16 +48,11 @@ function NavbarMenu() {
                                 </ul>
                             </li> */}
                         </ul>
-                        {/* <form className="d-flex mt-3" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-success" type="submit">Search</button>
-                        </form> */}
-                    </div>
                 </div>
             </div>
-        </nav>
+        </>
+    )
 
-    );
-};
+}
 
-export default NavbarMenu;
+export default DesktopMenu;
