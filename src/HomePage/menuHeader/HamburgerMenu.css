@@ -6,7 +6,7 @@
     top: 0;
     right: 0;
     width: 15vh;
-    height: 9vh;
+    height: 12vh; /* Same hight as the offcanvas dekstop */
     cursor: pointer;
     z-index: 2000; /* Ensure the burger menu is above other elements on the page. */
 

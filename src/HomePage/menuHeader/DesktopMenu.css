@@ -1,3 +1,15 @@
 .offcanvas-header {
     padding-top: 3vh;
+    margin: auto;
 }
+
+#offcanvasTop {
+    height: 12vh; /* The size of the offcanvas opened from the top of the screen */
+}
+
+#menuItemsDesk{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
