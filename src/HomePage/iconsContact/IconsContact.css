@@ -1,0 +1,14 @@
+.contactListIcons{
+    display: flex;
+    z-index: 1500;
+    padding-bottom: 1vh;
+}
+
+
+#linkedinIconHome {
+    margin: 0vh 5vh 0vh 5vh;
+}
+
+.ci {
+    cursor: pointer;
+}

@@ -58,15 +58,17 @@ function Sections({isLoadAniFinish, windowWidth}) {
         
         <div className='section' id="firstSection">
             <FirstSection isLoadAniFinish={isLoadAniFinish}/>
-
+                        
         </div>
-        <div className='section' id="secondSection">
+
+
+        {/* <div className='section' id="secondSection">
             <SecondSection/>
         </div>
         <div className='section' id="thirdSection">
 
-        {/* <FirstSection/> */}
-        </div>
+      
+        </div> */}
         </>
         
     );
