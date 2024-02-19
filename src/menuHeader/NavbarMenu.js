@@ -1,0 +1,37 @@
+import './NavbarMenu.css'
+import HamburgerMenu from './HamburgerMenu';
+import React from 'react';
+import useOffcanvas from './useOffcanvas';
+import MenuButtons from './MenuButtons';
+
+function NavbarMenu() {
+
+    const {canvasRef, isCanvasOpen, toggleCanvas} = useOffcanvas()
+
+    return(
+        <nav id='navbarMenu' className="navbar navbar-dark bg-dark fixed-top">
+            <div className="container-fluid">
+                <a className="navbar-brand">Home</a>
+                <button className="navbar-toggler" type="button" aria-label="Toggle navigation">
+                    {/* <span className="navbar-toggler-icon"></span> */}
+                    {<HamburgerMenu toggleCanvas={toggleCanvas}
+                                    isActive={isCanvasOpen}/>}
+                </button>
+                <div ref={canvasRef} className="offcanvas offcanvas-end text-bg-dark" tabIndex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div className="offcanvas-header">
+                        <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    </div>
+                    <div className="offcanvas-body">
+                        <div className="navbar-nav gap-5 justify-content-end flex-grow-1 pe-3">
+
+                            <MenuButtons toggleCanvas={toggleCanvas}/>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    );
+};
+
+export default NavbarMenu;

@@ -49,7 +49,7 @@ function PreLoadAnimation({windowWidth}) {
 
     return (
         <>
-        {/* <div ref={refHomePageLoader} className='HomePageLoader'>
+        <div ref={refHomePageLoader} className='HomePageLoader'>
             <div className="LoaderTextContainer">
 
                 <span ref={setSameRef} className='titleIntro'>{'Liad Brettler'}</span>
@@ -57,7 +57,7 @@ function PreLoadAnimation({windowWidth}) {
 
             </div>
 
-        </div> */}
+        </div>
         <div id="HomePageSections">
             <Sections isLoadAniFinish={isLoadAniFinish}
                         windowWidth={windowWidth}/>

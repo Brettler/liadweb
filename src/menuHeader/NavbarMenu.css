@@ -1,0 +1,7 @@
+.navbar-toggler {
+    z-index: 1050;
+}
+
+#offcanvasDarkNavbar {
+    width: 80%;
+}
