@@ -1,18 +1,13 @@
 
-import './Sections.css';
-import NavbarMenu from '../../menuHeader/NavbarMenu';
-import HamburgerMenu from '../../menuHeader/HamburgerMenu';
-import FirstSection from '../firstSectionHome/FirstSectionHome';
-import SecondSection from '../secondSection/SecondSection';
+import NavbarMenu from './NavbarMenu';
 import { useEffect, useRef, useState } from 'react';
-import DesktopMenu from '../../menuHeader/DesktopMenu';
+import DesktopMenu from './DesktopMenu';
 
-function Sections({isLoadAniFinish, windowWidth}) {
+
+function Menu({windowWidth}) {
 
     const ref = useRef(null);
     const [menuOpacity, setMenuOpacity] = useState(1);
-    // const [firstLoadMenu, setFirstLoadMenu] = useState(true); // This state control the menu
-
     useEffect( () => {
 
         const handleMenuPosition = (() => {
@@ -35,16 +30,16 @@ function Sections({isLoadAniFinish, windowWidth}) {
         return () => window.removeEventListener('scroll', handleMenuPosition);
 
     }, []);
-    
+
+
     return(
-
-        <>
-
-        {/* <div className="preSection" id="preSectionMenu">
+        <div className="preSection" id="preSectionMenu">
+            {/* Container for the menu bar */}
             <div id ='menuContainer' className='container'>
                 <div className='row justify-content-end'>
                     <div ref={ref} id='menuBar' className='col-xxl-1 col-xl-1 col-lg-1 col-md-2 col-sm-2 col-2'
                     style={{
+                        // opacity : menuOpacity,
                         position : 'fixed',
                         transition: 'all 0.6s ease',
                     }}>
@@ -52,24 +47,9 @@ function Sections({isLoadAniFinish, windowWidth}) {
                     </div>
                 </div>
             </div>
-        </div> */}
-        
-        <div className='section' id="firstSection">
-            <FirstSection isLoadAniFinish={isLoadAniFinish}/>
-                        
         </div>
+    )
 
+}
 
-        {/* <div className='section' id="secondSection">
-            <SecondSection/>
-        </div>
-        <div className='section' id="thirdSection">
-
-      
-        </div> */}
-        </>
-        
-    );
-};
-
-export default Sections;
+export default Menu;

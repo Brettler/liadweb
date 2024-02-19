@@ -1,0 +1,23 @@
+.dotted-button {
+    border-radius: 1.25rem; /* Makes the corners of the button rounded */
+    border: 2px dashed black; /* Sets the button's border to be 2 pixels thick, dashed, and black */
+    background-color: white; /* Sets the background color of the button to white */
+    padding: 0.75rem 1.5rem; /* Adds space inside the button; 0.75rem top and bottom, 1.5rem left and right */
+    font-weight: 600; /* Makes the text semi-bold */
+    text-transform: uppercase; /* Transforms the button text to uppercase for visual emphasis */
+    color: black; /* Sets the text color to black */
+    transition: all 0.3s; /* Smooth transition for all changes over 0.3 seconds, enhancing interactive effects */
+  }
+  
+  .dotted-button:hover {
+    transform: translateX(-4px) translateY(-4px); /* Moves the button up and to the left by 4px when hovered */
+    border-radius: 0.375rem; /* Changes the button's corner rounding to be less rounded when hovered */
+    box-shadow: 4px 4px 0px black; /* Creates a shadow effect to the bottom right, making it appear elevated when hovered */
+  }
+  
+  .dotted-button:active {
+    transform: translateX(0) translateY(0); /* Resets button position to its original state when clicked */
+    border-radius: 1.25rem; /* Resets the button's corner rounding to its original rounded state when clicked */
+    box-shadow: none; /* Removes the shadow effect, making the button appear as if it is pressed down when clicked */
+  }
+  

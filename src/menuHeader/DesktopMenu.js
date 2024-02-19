@@ -1,6 +1,7 @@
 
 import './DesktopMenu.css'
 import HamburgerMenu from './HamburgerMenu';
+import MenuButtons from './MenuButtons';
 import useOffcanvas from './useOffcanvas';
 
 function DesktopMenu({menuOpacity}) {
@@ -11,17 +12,14 @@ function DesktopMenu({menuOpacity}) {
 
         <>
             <button id='burgerDeskMenuIconToggler' className="navbar-toggler" type="button" aria-label="Toggle navigation" style={{opacity: menuOpacity}}>
-                <HamburgerMenu onClick={toggleCanvas}
+                <HamburgerMenu toggleCanvas={toggleCanvas}
                                 isActive={isCanvasOpen}/>
             </button>
 
             <div ref={canvasRef} class="offcanvas offcanvas-top text-bg-dark" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
                 <div class="offcanvas-header">
                     <div class="d-grid gap-5 d-flex justify-content-md-center">
-                            <button type="button" class="btn btn-light">Home</button>
-                            <button type="button" class="btn btn-light">About Me</button>
-                            <button type="button" class="btn btn-light">Projects</button>
-                            <button type="button" class="btn btn-light">Contact</button>
+                            <MenuButtons  toggleCanvas={toggleCanvas}/>
                     </div>
                 </div>
                 {/* <div class="offcanvas-body">
