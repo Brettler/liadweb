@@ -1,4 +1,13 @@
 #cardContainer{
-    height:40vh;
-    width: 15vh;
+    max-height: 70vh;
+    overflow: auto;
+    -ms-overflow-style: none; /* Microsoft */
+    scrollbar-width: none; /* FireFox */
+    margin-top: 4vh;
 }
+
+
+.container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
+  

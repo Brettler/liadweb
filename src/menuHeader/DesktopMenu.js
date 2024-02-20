@@ -16,13 +16,13 @@ function DesktopMenu({menuOpacity}) {
                                 isActive={isCanvasOpen}/>
             </button>
 
-            <div ref={canvasRef} class="offcanvas offcanvas-top text-bg-dark" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-                <div class="offcanvas-header">
-                    <div class="d-grid gap-5 d-flex justify-content-md-center">
+            <div ref={canvasRef} className="offcanvas offcanvas-top text-bg-dark" tabIndex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div className="offcanvas-header">
+                    <div className="d-grid gap-5 d-flex justify-content-md-center">
                             <MenuButtons  toggleCanvas={toggleCanvas}/>
                     </div>
                 </div>
-                {/* <div class="offcanvas-body">
+                {/* <div className="offcanvas-body">
 
                 </div> */}
             </div>
