@@ -1,0 +1,33 @@
+
+
+.secondSectionProject::after {
+    content: '⌄';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation:  bounce 0.8s infinite;
+    font-size: 3.8rem;
+    /* color: linear-gradient(to white, #00B4D8, #0096C7); */
+    color: #0096C7;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-7px);
+    }
+}
+
+blueArrow::after {
+    color: #00B4D8; /* Blue */
+}
+
+darkBlueArrow::after {
+    color: #0096C7; /* Dark Blue */
+}
