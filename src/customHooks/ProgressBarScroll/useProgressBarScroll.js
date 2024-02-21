@@ -1,35 +1,39 @@
 
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import './useProgressBarScroll.css';
 
 // Custom hook will handle all the progress of the scrolling.
-const useProgressBarScroll = ((ref) => {
+const useProgressBarScroll = (() => {
 
-    const [y, setY] = useState(window.scrollY); // storing current scroll bar positiotn
-    const [totalY, setTotalY] = useState(); // storing Total Scrollable area
-    const [scrollBar, setScrollBar] = useState(); // storing Size of scroll bar
+    const ref = useRef(null);
+    const [scrollPercent, setScrollPercent] = useState("0%");
 
+    const handleScroll = () => {
+        if (ref.current) {
+            const scrollTop = ref.current.scrollTop;
+            const scrollHeight = ref.current.scrollHeight;
+            const clientHeight = ref.current.clientHeight;
+            const scrolled = Math.round((scrollTop / (scrollHeight - clientHeight)) * 100);
+            setScrollPercent(`${scrolled}%`);
+        }
+    };
 
     useEffect(() => {
+        const container = ref.current;
+        if (container) {
+            container.addEventListener("scroll", handleScroll);
+            return () => container.removeEventListener("scroll", handleScroll);
+        }
 
-        
+    }, []); // This effect should run only once
 
+    console.log(scrollPercent);
 
-        window.addEventListener('scroll', () => setY(window.scrollY)); // Initalize even listener for changes each time the user scroll.
+    const isFullyScrolled = scrollPercent === '100%' ; // determain id fully scrolled.
+    console.log(`isFullyScrolled = ${isFullyScrolled}`);
 
-        const element = ref.current;
-        setTotalY(element.clientHeight);
-        setScrollBar(window.innerHeight);
+    return { ref, scrollPercent, isFullyScrolled};
 
-
-
-    }, [y]);
-
-    const scrollPercentage = `${((y + scrollBar) / totalY) *100}%`;
-
-    console.log(`scrollPercentage = ${scrollPercentage}`)
-
-    return scrollPercentage;
 });
 
 export default useProgressBarScroll;

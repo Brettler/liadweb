@@ -9,7 +9,7 @@
     animation:  bounce 0.8s infinite;
     font-size: 3.8rem;
     /* color: linear-gradient(to white, #00B4D8, #0096C7); */
-    color: #0096C7;
+    color: #00B4D8;
 }
 
 @keyframes bounce {
@@ -23,6 +23,11 @@
         transform: translateX(-50%) translateY(-7px);
     }
 }
+
+.secondSectionProject.hideArrow::after {
+    display: none; /* Hide the arrow */
+}
+
 
 blueArrow::after {
     color: #00B4D8; /* Blue */

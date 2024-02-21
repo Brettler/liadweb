@@ -4,7 +4,7 @@ import {useRef, useState} from 'react'
 import {motion} from "framer-motion"
 import { FiMousePointer } from 'react-icons/fi';
 
-function CardAnimation() {
+function CardAnimation({projectImage}) {
 
     const ROTATION_RANGE = 32.5;
     const HALF_ROTATION_RANGE = 32.5 / 2;
@@ -36,10 +36,7 @@ function CardAnimation() {
         setRotateY(0);
     };
 
-
-
     return(
-
         <motion.div
                     ref={cardRef}
                     onMouseMove={handleMouseIn}
@@ -48,15 +45,14 @@ function CardAnimation() {
                         rotateX,
                         rotateY,
                     }}
-                    className='animationCard'
-        >
-            <div className='cardContent'>
+                    className='animationCard'>
+
+            <div className='cardContent' style={{ backgroundImage: `url(${projectImage})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom' }}>
                 <FiMousePointer className='icon'/>
                 <p> Text Text Text</p>
             </div>
 
         </motion.div>
-
     )
 }
 

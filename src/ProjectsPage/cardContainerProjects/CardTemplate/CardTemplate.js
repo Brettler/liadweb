@@ -4,14 +4,11 @@ import CardAnimation from './CardAnimation/CardAnimation';
 import './CardTemplate.css'
 
 
-function CardTemplate() {
-
+function CardTemplate({projectImage}) {
 
     return(
         <div className="cardTemplate">
-
-            <CardAnimation/>
-
+            <CardAnimation projectImage={projectImage}/>
         </div>
     )
 }
