@@ -1,15 +1,11 @@
-
-
-
 .animationCard{
     transform-style: preserve-3d; /*  style={{transformStyle: "preserve-3d"}} */
     position: relative; /* relative */
-    height: 384px; /* h-96 * 4 */
+    height: 340px; /* h-96 * 4 */
     width: 288px; /* w-72 * 4 */
     border-radius: 0.75rem /* 12px = rounded-xl */;
     background: linear-gradient(to br, from-indigo-300, to to-violet-300) /*bg-gradient-to-br from-indigo-300 to-violet-300*/
 }
-
 
 .cardContent{
     transform: translateZ(75px);
@@ -20,9 +16,6 @@
     border-radius: 0.75rem; /*  rounded-xl */
     background: white; /* bg-white */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* shadow-lg */
-
-    
-
 }
 
 .icon {

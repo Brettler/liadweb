@@ -1,16 +1,20 @@
 import CardContainerProjects from "./cardContainerProjects/CardContainerProjects";
 import TextContainerProjects from "./textContainerProjects/TextContainerProjects";
-
+import useProgressBarScroll from '../customHooks/ProgressBarScroll/useProgressBarScroll'
 import './ProjectsPage.css'
 
 function ProjectsPage() {
+
+    const {ref, scrollPercent , isFullyScrolled} = useProgressBarScroll();
+
     return (
         <div className="ProjectPage">
             <div className="firstSectionProject">
                 <TextContainerProjects/>
             </div>
-            <div className="secondSectionProject">
-                <CardContainerProjects/>
+            <div className={ `secondSectionProject ${ isFullyScrolled ? 'hideArrow' : '' } ` }>
+                <CardContainerProjects containerCardsRef={ref}
+                                        scrollPercent={scrollPercent}/>
             </div>
         </div>
     )

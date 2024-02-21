@@ -3,50 +3,24 @@
 
 import './CardContainerProjects.css'
 import CardTemplate from './CardTemplate/CardTemplate';
-import useProgressBarScroll from '../../customHooks/ProgressBarScroll/useProgressBarScroll'
-import { useRef, useState, useEffect } from 'react';
 import '../../customHooks/ProgressBarScroll/useProgressBarScroll.css';
+import leafletChatImage from './CardTemplate/projectsImagesCards/LeafletChat.png'
 
-
-function CardContainerProjects() {
-
-    const cardsRef = useRef(null);
-
-    const [scroll, setScroll] = useState("0%");
-
-    const handleScroll = () => {
-        if (cardsRef.current) {
-            const scrollTop = cardsRef.current.scrollTop;
-            const scrollHeight = cardsRef.current.scrollHeight;
-            const clientHeight = cardsRef.current.clientHeight;
-            const scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
-            setScroll(`${scrolled}%`);
-        }
-    };
-
-    useEffect(() => {
-        const container = cardsRef.current;
-        if (container) {
-            container.addEventListener("scroll", handleScroll);
-            return () => container.removeEventListener("scroll", handleScroll);
-        }
-    }, []); // This effect should run only once
-
-    console.log(scroll);
-
+function CardContainerProjects({containerCardsRef, scrollPercent}) {
     return (
         <>
 
+        {/* The progress bar to be in the top of the container*/}
         <div className='container'>
             <div className='progressContainer'>
-                <div className='progressFill' style={{width: scroll}}></div>
+                <div className='progressFill' style={{width: scrollPercent}}></div>
             </div>
         </div>
 
-        <div  ref={cardsRef}  id='cardContainer' className="container">
+        <div  ref={containerCardsRef}  id='cardContainer' className="container">
 
             <div className='row'>
-                <div className='col'> <CardTemplate/> </div>
+                <div className='col'> <CardTemplate projectImage={leafletChatImage}/> </div>
                 <div className='col'> <CardTemplate/> </div>
                 <div className='col'> <CardTemplate/> </div>
                 <div className='col'> <CardTemplate/> </div>
