@@ -1,7 +1,7 @@
 import CardContainerProjects from "./cardContainerProjects/CardContainerProjects";
 import TextContainerProjects from "./textContainerProjects/TextContainerProjects";
 
-
+import './ProjectsPage.css'
 
 function ProjectsPage() {
     return (

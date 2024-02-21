@@ -1,13 +1,15 @@
 
 
 .progressContainer{
-    height: 8px;
+    height: 5px;
     width: 100%;
-    background-color: #d1dced;
-    position: fixed;
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly visible background */
+    border-radius: 5px; /* rounds the corners */    
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2;
 
 
 
@@ -15,5 +17,7 @@
 
 .progressFill {
     height: 100%;
-    background-color: blue;
+    background: linear-gradient(to right, #00B4D8, #0096C7); /* blue gradient */
+    border-radius: 5px; /* To match the container's radius */
+    height: 100%; /* Full height of the container */
 }

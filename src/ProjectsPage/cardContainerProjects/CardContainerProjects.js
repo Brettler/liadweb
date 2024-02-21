@@ -36,7 +36,15 @@ function CardContainerProjects() {
 
     return (
         <>
+
+        <div className='container'>
+            <div className='progressContainer'>
+                <div className='progressFill' style={{width: scroll}}></div>
+            </div>
+        </div>
+
         <div  ref={cardsRef}  id='cardContainer' className="container">
+
             <div className='row'>
                 <div className='col'> <CardTemplate/> </div>
                 <div className='col'> <CardTemplate/> </div>
@@ -51,12 +59,7 @@ function CardContainerProjects() {
             </div>
         </div>
 
-        <div className='progressContainer'>
-            <div className='progressFill' style={{width: scroll}}>
 
-                </div>
-
-        </div>
         </>
     )
 }
