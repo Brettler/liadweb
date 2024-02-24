@@ -2,9 +2,9 @@
 import './CardAnimation.css'
 import {useRef, useState} from 'react'
 import {motion} from "framer-motion"
-import { FiMousePointer } from 'react-icons/fi';
+//import { FiMousePointer } from 'react-icons/fi';
 
-function CardAnimation({projectImage}) {
+function CardAnimation({projectImage, title, description}) {
 
     const ROTATION_RANGE = 32.5;
     const HALF_ROTATION_RANGE = 32.5 / 2;
@@ -47,9 +47,11 @@ function CardAnimation({projectImage}) {
                     }}
                     className='animationCard'>
 
-            <div className='cardContent' style={{ backgroundImage: `url(${projectImage})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom' }}>
-                <FiMousePointer className='icon'/>
-                <p> Text Text Text</p>
+            {/* <div className='cardContent' style={{ backgroundImage: `url(${projectImage})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom' }}> */}
+            <div className='cardContent'>
+                <img src={projectImage} alt={title} className='cardImage' />
+                <h3 className='cardTitle'> {title} </h3>
+                <p className='cardDescription'> {description} </p>
             </div>
 
         </motion.div>
