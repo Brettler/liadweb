@@ -5,7 +5,9 @@
     -ms-overflow-style: none; /* Microsoft */
     scrollbar-width: none; /* FireFox */
     max-width: 90%;
-    margin-top: 15px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    padding-top: 40px;
     
 }
 
@@ -29,7 +31,7 @@
     border: none;
     border-radius: 0; /* If you want the card corners to be exactly like the image */
     padding: 0;
-    color: #fff; /* Adjust based on your image */
+    color: #fff; 
 }
 
 .android-card .card-img-overlay {
@@ -46,4 +48,8 @@
     border-radius: 0.25rem; /* If you want your other cards to have rounded corners */
 }
 
-/* Adjust the rest of your CSS to remove padding and borders from images and cards */
+
+.col {
+    padding-bottom: 30px;
+
+}

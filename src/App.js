@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import PreLoadAnimation from './preLoadAnimation/PreLoadAnimation';
 import {useState, useEffect} from 'react';
 
@@ -16,6 +16,7 @@ function App() {
     window.addEventListener('resize', updateSizeWindow);
     return () => window.removeEventListener('resize', updateSizeWindow);
   },[]);
+  
 
   return (
     <BrowserRouter>
