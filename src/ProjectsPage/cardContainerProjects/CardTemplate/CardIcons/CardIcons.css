@@ -1,9 +1,11 @@
 
 
 .cardIconsContainer .ci {
-
     margin: 0px 6px 0px 6px;
     cursor: auto;
 }
 
 
+#imgIconProjects {
+    vertical-align:0%
+}

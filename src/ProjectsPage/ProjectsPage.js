@@ -2,12 +2,13 @@ import CardContainerProjects from "./cardContainerProjects/CardContainerProjects
 import TextContainerProjects from "./textContainerProjects/TextContainerProjects";
 import useProgressBarScroll from '../customHooks/ProgressBarScroll/useProgressBarScroll'
 import './ProjectsPage.css'
-
+//import RainMatrixEffect from '../RainMatrixEffect/RainMatrixEffect'
 function ProjectsPage() {
 
     const {ref, scrollPercent , isFullyScrolled} = useProgressBarScroll();
 
     return (
+        <>
         <div className="ProjectPage">
             <div className="firstSectionProject">
                 <TextContainerProjects/>
@@ -17,6 +18,7 @@ function ProjectsPage() {
                                         scrollPercent={scrollPercent}/>
             </div>
         </div>
+        </>
     )
 }
 

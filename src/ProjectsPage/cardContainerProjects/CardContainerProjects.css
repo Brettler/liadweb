@@ -8,7 +8,6 @@
     margin-top: 30px;
     padding-bottom: 20px;
     padding-top: 40px;
-    
 }
 
 
@@ -20,9 +19,6 @@
     max-width: 90%;
 }
 
-.card-img-top{
-    height: 300px;
-}
 
 .android-card {
     height: 300px; /* Or whatever height you want */
@@ -44,12 +40,15 @@
     border-radius: inherit;
 }
 
-.card h-100 {
-    border-radius: 0.25rem; /* If you want your other cards to have rounded corners */
-}
-
 
 .col {
     padding-bottom: 30px;
+}
 
+
+@media (min-width: 1550px) {
+    .row-cols-1550px-4 > .col {
+        flex: 0 0 auto;
+        width: 25%;
+    }
 }

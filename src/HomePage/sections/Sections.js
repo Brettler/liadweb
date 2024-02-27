@@ -1,11 +1,7 @@
 
 import './Sections.css';
-import NavbarMenu from '../../menuHeader/NavbarMenu';
-import HamburgerMenu from '../../menuHeader/HamburgerMenu';
 import FirstSection from '../firstSectionHome/FirstSectionHome';
-import SecondSection from '../secondSection/SecondSection';
 import { useEffect, useRef, useState } from 'react';
-import DesktopMenu from '../../menuHeader/DesktopMenu';
 
 function Sections({isLoadAniFinish, windowWidth}) {
 
