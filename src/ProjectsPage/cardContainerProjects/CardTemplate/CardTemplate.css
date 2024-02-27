@@ -10,8 +10,7 @@
   background-color: rgb(35, 35, 37);
   color: white;
   border-radius: 7%;
-  width: 88%;
-  height: auto;
+  width: 330px;
   display: flex;
   margin: auto;
   transition: transform .2s;
@@ -19,16 +18,59 @@
 }
 
 .card:hover {
-  transform: scale(1.1) /* 150% zoom*/
+  transform: scale(1.1) /* 110% zoom*/
+
+
+}
+
+.card:hover #regulaerCardImg{ /* When the user hover the card we make the image darker and show github link for the project */
+  opacity: 0;
+}
+
+.card:hover #githubIconLink{
+  opacity: 1;
+  z-index: 40;
+  border: 40px rgb(35, 35, 37);
+
+}
+
+
+
+#githubIconLink{
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+
+#githubIconLink:hover{
+  transform: scale(1.3);
+  opacity: 1;
+}
+
+.regularCardImgContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Effects vertical aligment */
+  align-items: center; /* Effects horizantal aligment */
 
 }
 
 #cardAndroidImg{
-  height: 35vh;
+  height: 340px;
+}
+
+.matrixCanvas{
+  padding:var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  border-radius: 25px;
+  height: 240px;
+  width:100%;
+
 }
 
 #regulaerCardImg {
-  height: 200px;
+  padding:var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  border-radius: 25px;
+  height: 240px;
 }
 
 .card-footer{
@@ -63,7 +105,7 @@
   }
 
   #regulaerCardImg {
-    height: 200px;
+    height: 250px;
   }
 
   .card-body {

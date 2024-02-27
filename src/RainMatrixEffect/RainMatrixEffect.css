@@ -1,0 +1,8 @@
+.matrixCanvas {
+    position: absolute;
+    display: flex;
+
+
+    z-index: -1; /* Ensure it's behind other content */
+  }
+  

@@ -1,30 +1,8 @@
-
-import { useEffect, useRef, useState } from 'react';
 import './HamburgerMenu.css'
-
 
 // if isCanvasOpen is true -> isActive true and we will start the animation. 
 function HamburgerMenu({toggleCanvas, isActive}) {
-    // const refBurger = useRef(null);
-
-    // useEffect( () => {
-    //     const burgerClick = () => refBurger.current.classList.toggle('active');
-    //     refBurger.current.addEventListener('click', burgerClick);
-
-    //     return (() => {
-    //         refBurger.current.removeEventListener('click', burgerClick)
-    //     });
-    // }, []);
-
-    // const [isActive, setIsActive] = useState(false);
-
-    // const handleClick = () =>{
-    //     setIsActive(!isActive); // Toggle the 'active' class for animation.
-    //     onClick();
-    // };
-
     return (
-
         <div className={`burgerContainer ${isActive ? 'active' : ''}`} onClick={toggleCanvas}>
             <div className="burgerIcon">
                 <span></span>
@@ -32,8 +10,6 @@ function HamburgerMenu({toggleCanvas, isActive}) {
                 <span></span>
             </div>
         </div>
-
-
     )
 }
 
