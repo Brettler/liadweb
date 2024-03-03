@@ -2,7 +2,7 @@
 import './GithubLinkProject.css'
 import { useRef, useEffect} from 'react'
 import { Popover } from 'bootstrap';
-import RainMatrixEffect from '../../../../RainMatrixEffect/RainMatrixEffect';
+import RainMatrixEffect from '../../../../../RainMatrixEffect/RainMatrixEffect';
 
 
 function GithubLinkProject({projectURL}) {

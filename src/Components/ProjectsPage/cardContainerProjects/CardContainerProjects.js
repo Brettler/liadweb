@@ -1,5 +1,5 @@
 import './CardContainerProjects.css';
-import '../../customHooks/ProgressBarScroll/useProgressBarScroll.css';
+import '../../../customHooks/ProgressBarScroll/useProgressBarScroll.css';
 import CardTemplate from './CardTemplate/CardTemplate';
 import websiteChat2 from './CardTemplate/projectsImagesCards/leafletWebImg/websiteChat2.png';
 import androidChat from './CardTemplate/projectsImagesCards/leafletAndroidImg/androidChat.png';

@@ -1,7 +1,7 @@
 import './CardTemplate.css'
 import CardIcons from './CardIcons/CardIcons'
 import GithubLinkProject from './GithubLinkProject/GithubLinkProject';
-import RainMatrixEffect from '../../../RainMatrixEffect/RainMatrixEffect';
+import RainMatrixEffect from '../../../../RainMatrixEffect/RainMatrixEffect';
 
 
 function CardTemplate({projectImage, title, description, iconsArr, projectURL, isAndroidCard}) {
