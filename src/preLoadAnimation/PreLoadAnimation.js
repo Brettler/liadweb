@@ -1,6 +1,6 @@
 import React, {useRef, useEffect, useState} from 'react';
 import './PreLoadAnimation.css'
-import Sections from '../HomePage/sections/Sections'
+import Sections from '../Components/HomePage/sections/Sections'
 
 
 function PreLoadAnimation({windowWidth}) {

@@ -1,6 +1,6 @@
 
 import './Sections.css';
-import FirstSection from '../firstSectionHome/FirstSectionHome';
+import FirstSection from './firstSectionHome/FirstSectionHome';
 import { useEffect, useRef, useState } from 'react';
 
 function Sections({isLoadAniFinish, windowWidth}) {

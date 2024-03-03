@@ -1,9 +1,9 @@
 
-import TextContainer from '../textContainer/TextContainer'
-import MyIMG from '../myIMG/MyIMG'
+import TextContainer from './textContainer/TextContainer'
+import MyIMG from './myIMG/MyIMG'
 import './FirstSectionHome.css'
 import {useState} from 'react'
-import IconsContact from '../iconsContact/IconsContact';
+import IconsContact from '../../iconsContact/IconsContact';
 
 
 function FirstSection({isLoadAniFinish}) {
