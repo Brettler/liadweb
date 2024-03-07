@@ -9,8 +9,8 @@ import geneticAlgoCalssicRes from './CardTemplate/projectsImagesCards/geneticAlg
 import knnCPP from './CardTemplate/projectsImagesCards/knnCPP/knnCPP.jpg'
 import EPFlowChat from './CardTemplate/projectsImagesCards/projectEP/EPFlowChart.jpg'
 import producerConsumerProblemImg from './CardTemplate/projectsImagesCards/producerConsumerProblem/producerConsumerProblemImg.jpg'
-import numpyIcon from './CardTemplate/CardIcons/iconsImg/numpyIcons/numpylogoicon.svg'
-import pygIcon from './CardTemplate/CardIcons/iconsImg/pygIcons/pyg_logo.png'
+import numpyIcon from './CardTemplate/CardSkillsIcons/iconsImg/numpyIcons/numpylogoicon.svg'
+import pygIcon from './CardTemplate/CardSkillsIcons/iconsImg/pygIcons/pyg_logo.png'
 
 function CardContainerProjects({containerCardsRef, scrollPercent}) {
 
@@ -67,8 +67,8 @@ function CardContainerProjects({containerCardsRef, scrollPercent}) {
         </div>
 
         <div  ref={containerCardsRef}  id='cardContainer' className="container">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-3 row-cols-1550px-4 g-4">
-                <div class="col">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-3 row-cols-1550px-4 g-4">
+                <div className="col">
                     <CardTemplate projectImage={websiteChat2}
                                     title={leafletWebTitle}
                                     description={leafletWebDescription}
@@ -76,7 +76,7 @@ function CardContainerProjects({containerCardsRef, scrollPercent}) {
                                     projectURL={leafletURL}
                                     isAndroidCard={false}/>
                 </div>
-                <div class="col">
+                <div className="col">
                     <CardTemplate projectImage={androidChat}
                                     title={leafletAndroidTitle}
                                     description={leafletAndroidDescription}  
@@ -84,7 +84,7 @@ function CardContainerProjects({containerCardsRef, scrollPercent}) {
                                     projectURL={androidURL}
                                     isAndroidCard={true}/>
                 </div>
-                <div class="col">
+                <div className="col">
                     <CardTemplate projectImage={EPFlowChat}
                                     title={epProjectTitle}
                                     description={epProjectDescription}
@@ -92,7 +92,7 @@ function CardContainerProjects({containerCardsRef, scrollPercent}) {
                                     //projectURL={leafletURL}
                                     isAndroidCard={false}/>
                 </div>
-                <div class="col">
+                <div className="col">
                     <CardTemplate projectImage={rumorScreen1Start}
                                     title={rumorGameTitle}
                                     description={rumorGameDescription}
@@ -100,7 +100,7 @@ function CardContainerProjects({containerCardsRef, scrollPercent}) {
                                     projectURL={rumorURL}
                                     isAndroidCard={false}/>
                 </div>
-                <div class="col">
+                <div className="col">
                     <CardTemplate projectImage={geneticNNGui}
                                     title={geneticNNTitle}
                                     description={geneticNNDescription}
@@ -108,7 +108,7 @@ function CardContainerProjects({containerCardsRef, scrollPercent}) {
                                     projectURL={geneticNNURL}
                                     isAndroidCard={false}/>
                 </div>
-                <div class="col">
+                <div className="col">
                     <CardTemplate projectImage={geneticAlgoCalssicRes}
                                     title={geneticAlgoTitle}
                                     description={geneticAlgoDescription}
@@ -117,7 +117,7 @@ function CardContainerProjects({containerCardsRef, scrollPercent}) {
                                     isAndroidCard={false}/>
                 </div>
 
-                <div class="col">
+                <div className="col">
                     <CardTemplate projectImage={knnCPP}
                                     title={knnCPPTitle}
                                     description={knnCPPDescription}
@@ -126,7 +126,7 @@ function CardContainerProjects({containerCardsRef, scrollPercent}) {
                                     isAndroidCard={false}/>
                 </div>
 
-                <div class="col">
+                <div className="col">
                     <CardTemplate projectImage={producerConsumerProblemImg}
                                     title={producerConsumerTitle}
                                     description={producerConsumerDescription}

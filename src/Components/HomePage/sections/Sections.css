@@ -1,12 +1,19 @@
 
-.section {
+/* .section {
     display: flex;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
+} */
+
+#firstSection{
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 15px;
 }
 
 @keyframes slideDown {

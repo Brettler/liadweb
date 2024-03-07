@@ -1,7 +1,7 @@
 .profilePic{
     /* max-height: auto; */
-    height: 13rem;
-    width: 13rem;
+    height: 300px;
+
     object-fit: cover;
     border-radius: 100%;
     border-color: black;

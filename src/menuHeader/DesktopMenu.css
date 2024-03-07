@@ -1,6 +1,5 @@
 .offcanvas-header {
-    padding-top: 3vh;
-    margin: auto;
+    margin: auto; /* Center the container of the buttons in the header*/
 }
 
 #offcanvasTop {
@@ -8,8 +7,7 @@
 }
 
 #menuItemsDesk{
-    width: 100%;
+    width: 80%;
     justify-content: space-between;
     align-items: center;
 }
-

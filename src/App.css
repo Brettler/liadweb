@@ -39,55 +39,34 @@
   }
 } */
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 
-*, *:before, *:after {
+
+/* *, *:before, *:after {
   box-sizing: border-box;
-}
+} */
 
-html, body {
-  margin: 0; /* Remove default margin */
-  padding: 0;
+/* html, body {
+  margin: 0; 
+  padding: 0; */
   /* min-width: 450px; */
-  width: 100%;
-  min-height: 100%;
+  /* width: 100%; */
+  /* min-height: 100%; */
 
-}
+/* } */
 
 
-body {
-  font-family: 'Space Grotesk', sans-serif;
-  background: url("dark_background.jpeg") no-repeat center center fixed;
+/* body { */
+  /* font-family: 'Space Grotesk', sans-serif; */
+  /* background: url("dark_background.jpeg") no-repeat center center fixed; */
   /* padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); */
   /* background-attachment: fixed; */
-  background-size: cover;
+  /* background-size: cover; */
   /* min-width: 40vh; */
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   /* background-repeat: no-repeat; */
-  overflow-x: hidden;
-  background-color: black;
+  /* overflow-x: hidden;
+  background-color: black; */
 
 
-}
+/* } */
 
-/* 
-@media (max-width: 450px) {
-  body {
-
-    overflow-x: hidden;
-
-  }
-  
-} */
-
-/* @media (max-width: 450px) and (orientation: landscape) {
-
-  
-  body {
-    background-size: 150vw 100vh;
-
-  }
-  
-} */

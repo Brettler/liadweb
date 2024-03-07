@@ -2,6 +2,7 @@
 import './Sections.css';
 import FirstSection from './firstSectionHome/FirstSectionHome';
 import { useEffect, useRef, useState } from 'react';
+import IconsContact from '../iconsContact/IconsContact';
 
 function Sections({isLoadAniFinish, windowWidth}) {
 
@@ -9,28 +10,28 @@ function Sections({isLoadAniFinish, windowWidth}) {
     const [menuOpacity, setMenuOpacity] = useState(1);
     // const [firstLoadMenu, setFirstLoadMenu] = useState(true); // This state control the menu
 
-    useEffect( () => {
+    // useEffect( () => {
 
-        const handleMenuPosition = (() => {
+    //     const handleMenuPosition = (() => {
 
-            const scrollThreshPos = window.innerHeight * 0.2; // Define the hight in which when the user scroll under we set fixed to false.
-            const currentScrollPos = window.scrollY;
-            const opacity = Math.max(0, 1- currentScrollPos / scrollThreshPos + 0.2); // Calculate opacity based on scroll position.
+    //         const scrollThreshPos = window.innerHeight * 0.2; // Define the hight in which when the user scroll under we set fixed to false.
+    //         const currentScrollPos = window.scrollY;
+    //         const opacity = Math.max(0, 1- currentScrollPos / scrollThreshPos + 0.2); // Calculate opacity based on scroll position.
 
-            setMenuOpacity(opacity);
+    //         setMenuOpacity(opacity);
 
-            if(currentScrollPos < scrollThreshPos) {
-                ref.current.style.position = 'fixed';
-            } else {
-                ref.current.style.position = 'relative';
-            }
+    //         if(currentScrollPos < scrollThreshPos) {
+    //             ref.current.style.position = 'fixed';
+    //         } else {
+    //             ref.current.style.position = 'relative';
+    //         }
             
-        });
+    //     });
 
-        window.addEventListener('scroll', handleMenuPosition);
-        return () => window.removeEventListener('scroll', handleMenuPosition);
+    //     window.addEventListener('scroll', handleMenuPosition);
+    //     return () => window.removeEventListener('scroll', handleMenuPosition);
 
-    }, []);
+    // }, []);
     
     return(
 
@@ -49,11 +50,9 @@ function Sections({isLoadAniFinish, windowWidth}) {
                 </div>
             </div>
         </div> */}
-        
-        <div className='section' id="firstSection">
-            <FirstSection isLoadAniFinish={isLoadAniFinish}/>
-                        
-        </div>
+        <section className='section' id="firstSection">
+            <FirstSection isLoadAniFinish={isLoadAniFinish}/>         
+        </section>
 
 
         {/* <div className='section' id="secondSection">

@@ -2,10 +2,10 @@
 import './GithubLinkProject.css'
 import { useRef, useEffect} from 'react'
 import { Popover } from 'bootstrap';
-import RainMatrixEffect from '../../../../../RainMatrixEffect/RainMatrixEffect';
+//import RainMatrixEffect from '../../../../../RainMatrixEffect/RainMatrixEffect';
+import fallIcon from './fall.ico'
 
-
-function GithubLinkProject({projectURL}) {
+function GithubLinkProject({projectURL, isAndroidCard}) {
 
     const popRef = useRef(null)
 
@@ -24,10 +24,28 @@ function GithubLinkProject({projectURL}) {
     }, []);
 
     return (
+//         <div className='linkIconsContainer'>
+//             <span>
+//                 <i id='githubIconLink' className='ci ci-github-light ci-2x' onClick={() => openInNewTab(projectURL)}></i>
+//                 /* </span>
+// <span>
+//                 <i id='demoIconLink'  className='ci' onClick={() => openInNewTab('https://leaflet-chat-app.oa.r.appspot.com/')}>
+//                     <img src={fallIcon} alt='demo' />
+//                 </i>
+//                 </span>
+//         </div> 
         <>
-        
-        <i id='githubIconLink' className='ci ci-github-light ci-2x' onClick={() => openInNewTab(projectURL)}></i>
+        {isAndroidCard ? 
+            (
+                <i id='githubIconLinkAndroid' className='ci ci-github-light ci-2x' onClick={() => openInNewTab(projectURL)}></i>
+            ):
+            (
+                <i id='githubIconLink' className='ci ci-github-light ci-2x' onClick={() => openInNewTab(projectURL)}></i>
+            )
+
+        }
         </>
+
     )
 
 }
