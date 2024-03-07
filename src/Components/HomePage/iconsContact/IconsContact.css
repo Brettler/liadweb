@@ -1,14 +1,25 @@
-.contactListIcons{
-    display: flex;
-    z-index: 1500;
-    padding-bottom: 1vh;
+#contactListIcons{
+    z-index: 2;
+    position: fixed;
+
+    top:12vh;
+    right: 0px;
+    max-width: 68px;
+    padding: 20px 20px;
 }
 
-
-#linkedinIconHome {
-    margin: 0vh 5vh 0vh 5vh;
-}
 
 .ci {
     cursor: pointer;
 }
+
+#cardIconsSkillContainer.ci {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#linkedinIconHome {
+    margin: 15px 0px;
+}
+

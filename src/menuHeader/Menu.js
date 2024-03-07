@@ -2,7 +2,7 @@
 import NavbarMenu from './NavbarMenu';
 import { useEffect, useRef, useState } from 'react';
 import DesktopMenu from './DesktopMenu';
-
+import './Menu.css'
 
 function Menu({windowWidth}) {
 
@@ -33,21 +33,17 @@ function Menu({windowWidth}) {
 
 
     return(
-        <div className="preSection" id="preSectionMenu">
+        <header className="preSection" id="preSectionMenu">
             {/* Container for the menu bar */}
-            <div id ='menuContainer' className='container'>
-                <div className='row justify-content-end'>
-                    <div ref={ref} id='menuBar' className='col-xxl-1 col-xl-1 col-lg-1 col-md-2 col-sm-2 col-2'
-                    style={{
-                        // opacity : menuOpacity,
-                        position : 'fixed',
-                        transition: 'all 0.6s ease',
-                    }}>
-                        {windowWidth < 500 ? <NavbarMenu/>: <DesktopMenu menuOpacity={menuOpacity}/>}
-                    </div>
-                </div>
+            <div ref={ref} id='menuContainer' className='container'
+            style={{
+                // opacity : menuOpacity,
+                position : 'fixed',
+                transition: 'all 0.6s ease',
+            }}>
+                {windowWidth < 850 ? <NavbarMenu/>: <DesktopMenu menuOpacity={menuOpacity}/>}
             </div>
-        </div>
+        </header>
     )
 
 }

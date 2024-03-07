@@ -56,12 +56,13 @@ function PreLoadAnimation({windowWidth}) {
                 <span ref={setSameRef} className='titleIntro'>{'Software Devloper'}</span>
 
             </div>
-
         </div>
-        <div id="HomePageSections">
+        <div>
+
             <Sections isLoadAniFinish={isLoadAniFinish}
                         windowWidth={windowWidth}/>
         </div>
+
         </>
     )
 

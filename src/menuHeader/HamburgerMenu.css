@@ -1,22 +1,21 @@
 
 
 .burgerContainer {
-    display: flex;
     position: relative;
-    top: 0;
-    right: 0;
-    width: 15vh;
-    height: 12vh; /* Same hight as the offcanvas dekstop */
+    display: flex;
     cursor: pointer;
+    /* height: 300px;
+    width: 300px; */
     z-index: 2000; /* Ensure the burger menu is above other elements on the page. */
-
 }
+
+
 
 .burgerIcon {
     display: flex;
     position: relative; /* allow absolute positioning of span elements (the pattys of the burger icon) relative to this container. */
-    width: 6vh;
-    height: 6vh;
+    width: 60px;
+    height: 60px;
     margin: auto; /* Centers the icon within the container */
     align-items: center; /* Vertically aligns the spans in the center of the current element */
     transform: rotate(0); /* Initalize state without rotation */
@@ -26,8 +25,8 @@
 .burgerIcon.active {
     display: flex;
     position: relative;
-    width: 6vh;
-    height: 6vh;
+    width: 60px;
+    height: 60px;
     margin: auto;
     align-items: center;
     transform: rotate(0);
@@ -93,7 +92,7 @@
 }
 
 .burgerContainer.active span:nth-child(3){
-    bottom: 2.5vh;
+    bottom: 28px;
     width: 100%;
     transform: rotate(90deg);
     transition-delay: 0s;
@@ -101,7 +100,7 @@
 }
 
 /* Phone Settings */
-@media (max-width: 450px) {
+@media (max-width: 850px) {
 
     .burgerContainer {
         display: flex;
@@ -121,8 +120,8 @@
     .burgerIcon {
         display: flex;
         position: relative;
-        width: 6vh;
-        height: 4vh;
+        width: 35px;
+        height: 35px;
         margin: auto;
         align-items: center;
         transform: rotate(0);
@@ -132,8 +131,8 @@
     .burgerIcon.active {
         display: flex;
         position: relative;
-        width: 5vh;
-        height: 5vh;
+        width: 35px;
+        height: 35px;
         margin: auto;
         align-items: center;
         transform: rotate(0);

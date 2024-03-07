@@ -1,11 +1,11 @@
-import './CardIcons.css'
+import './CardSkillsIcons.css'
 
 
-function CardIcons({iconsArr}) {
+function CardSkillsIcons({iconsArr}) {
 
       
     return (
-            <div className='cardIconsContainer'>
+            <div className='cardIconsSkillContainer'>
                 <span>
                     {iconsArr.map((icon, index) => {
                             // Check if the icon includees 'svg' to decide if it's class name or an private icon I added.
@@ -24,4 +24,4 @@ function CardIcons({iconsArr}) {
     )
 }
 
-export default CardIcons;
+export default CardSkillsIcons;

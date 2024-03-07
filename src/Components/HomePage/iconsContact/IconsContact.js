@@ -24,16 +24,16 @@ function IconsContact() {
 
       
     return (
-            <div className='contactListIcons'>
-                <span >
-                    <i className="ci ci-github-light ci-3x" onClick={() =>openInNewTab('https://github.com/Brettler')}></i>
-                    <i id='linkedinIconHome' className="ci ci-linkedin-light ci-3x" onClick={() =>openInNewTab('https://www.linkedin.com/in/liad-brettler/')}></i>
-
-                    <i className="ci ci-gmail ci-3x" onClick={() =>openInNewTab('mailto:liad.brettler@gmail.com')}></i>
-
-
-
-                </span>
+            <div id='contactListIcons' className='container'>
+                <div >
+                    <i className="ci ci-github-light ci-2x" onClick={() =>openInNewTab('https://github.com/Brettler')}></i>
+                </div>
+                <div>
+                    <i id='linkedinIconHome' className="ci ci-linkedin-light ci-2x" onClick={() =>openInNewTab('https://www.linkedin.com/in/liad-brettler/')}></i>
+                </div>
+                <div>
+                    <i className="ci ci-gmail ci-2x" onClick={() =>openInNewTab('mailto:liad.brettler@gmail.com')}></i>
+                </div>
             </div>
     )
 }

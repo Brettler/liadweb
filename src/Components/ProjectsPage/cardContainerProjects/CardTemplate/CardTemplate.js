@@ -1,53 +1,52 @@
 import './CardTemplate.css'
-import CardIcons from './CardIcons/CardIcons'
+import CardSkillsIcons from './CardSkillsIcons/CardSkillsIcons'
 import GithubLinkProject from './GithubLinkProject/GithubLinkProject';
 import RainMatrixEffect from '../../../../RainMatrixEffect/RainMatrixEffect';
 
-
 function CardTemplate({projectImage, title, description, iconsArr, projectURL, isAndroidCard}) {
-
-
 
     return(
         <>
             {
             isAndroidCard ? 
             (
-            <div id='androidCard' class="card mb-3 h-100">
-                <div id='androidRow' class="row g-0">
-                  <div id='androidImgContainer' class="col-md-5">
-                    <img id='cardAndroidImg' src={projectImage} class="img-fluid rounded-center" alt={title}/>
-                    <GithubLinkProject projectURL={projectURL}/>
+            <div id='androidCard' className="card mb-3 h-100">
+                <div id='androidRow' className="row g-0">
+                  <div id='androidImgContainer' className="col-md-5">
+                    <GithubLinkProject projectURL={projectURL} isAndroidCard={isAndroidCard}/>
+                    <RainMatrixEffect/>
+
+                    <img id='cardAndroidImg' src={projectImage} className="img-fluid rounded-center" alt={title}/>                    
                    
 
                   </div>
-                  <div class="col-md-7">
-                    <div class="card-body">
-                        <h5 class="card-title">{title}</h5>
-                        <p class="card-text">{description}</p>
+                  <div className="col-md-7">
+                    <div className="card-body">
+                        <h5 className="card-title">{title}</h5>
+                        <p className="card-text">{description}</p>
                     </div>
                   </div>
                 </div>
-                <div class="card-footer">
-                    <CardIcons iconsArr={iconsArr}/>
+                <div className="card-footer">
+                    <CardSkillsIcons iconsArr={iconsArr}/>
                 </div>
             </div>
             ) : (
-            <div class='card h-100'>
+            <div className='card h-100'>
                 {/*Regular cards view */ }
                 <span className='regularCardImgContainer'>
-                    <GithubLinkProject projectURL={projectURL}/>
+                    <GithubLinkProject projectURL={projectURL} isAndroidCard={isAndroidCard}/>
                     <RainMatrixEffect/>
 
-                    <img id ='regulaerCardImg' src={projectImage} class="card-img-top" alt={{title}}/>
+                    <img id ='regulaerCardImg' src={projectImage} className="card-img-top" alt={{title}}/>
                 </span>
 
-                <div class="card-body">
-                    <h5 class="card-title">{title}</h5>
-                    <p class="card-text">{description}</p>
+                <div className="card-body">
+                    <h5 className="card-title">{title}</h5>
+                    <p className="card-text">{description}</p>
                 </div>
-                <div class="card-footer">
-                    <CardIcons iconsArr={iconsArr}/>
+                <div className="card-footer">
+                    <CardSkillsIcons iconsArr={iconsArr}/>
                 </div>
             </div>
             )}
