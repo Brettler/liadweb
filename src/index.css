@@ -20,6 +20,8 @@ html, body {
   background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none; /* Microsoft */
+  scrollbar-width: none; /* FireFox */
 
 }
 
@@ -27,9 +29,21 @@ body {
   background: url("dark_background.jpeg") no-repeat center center fixed;
   background-size: cover;
   overflow-x: hidden;
+  -ms-overflow-style: none; /* Microsoft */
+  scrollbar-width: none; /* FireFox */
 
   /* background-color: var(--background-color); */
 }
+
+html::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
 
 img {
   display: inline;

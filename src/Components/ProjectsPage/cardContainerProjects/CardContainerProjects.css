@@ -1,7 +1,7 @@
 #cardContainer{
     position: relative;
-    max-height: 70vh;
-    overflow: auto;
+    /* max-height: 70vh; */
+    /* overflow: auto; */
     -ms-overflow-style: none; /* Microsoft */
     scrollbar-width: none; /* FireFox */
     max-width: 90%;

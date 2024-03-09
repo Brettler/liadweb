@@ -4,7 +4,7 @@ import './TitleProjects.css'
 
 function TitleProjects() {
 
-    const title = 'My Projects Section';
+    const title = 'Projects Section';
 
     return (
         <div id='titleProjects'>
