@@ -10,8 +10,10 @@ function PreLoadAnimation({windowWidth}) {
     const [isLoadAniFinish, setIsLoadAniFinish] = useState(false);
     
     useEffect(() => {
-        
-        setTimeout(() => { 
+        // Prevent scrolling when the load animation is mounts.
+        document.body.classList.add('bodyNoScroll');
+
+        const timer = setTimeout(() => { 
 
             titleRefs.forEach((span, index) => {
                 setTimeout(() => {
@@ -39,7 +41,25 @@ function PreLoadAnimation({windowWidth}) {
         
         }, 500);
 
+        // Cleanup function to allow scrolling when the load animation is unmounds.
+        return () => {
+            clearTimeout(timer);
+            document.body.classList.remove('bodyNoScroll');
+        }
+
     }, [titleRefs]);
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (isLoadAniFinish) {
+                document.body.classList.remove('bodyNoScroll');
+                document.body.classList.add('bodyScroll')
+            }
+        }, 2020)
+
+    },[isLoadAniFinish]) // Listen to changes in isLoadFinish to allow scrolling / not allowed.
+
+
 
     const setSameRef = (element) => {
         if (element && !titleRefs.includes(element)) {

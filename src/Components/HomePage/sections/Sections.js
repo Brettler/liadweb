@@ -3,6 +3,9 @@ import './Sections.css';
 import FirstSection from './firstSectionHome/FirstSectionHome';
 import { useEffect, useRef, useState } from 'react';
 import IconsContact from '../iconsContact/IconsContact';
+import ProjectPage from '../../ProjectsPage/ProjectsPage'
+import ContactPage from '../../ContactPage/ContactPage'
+
 
 function Sections({isLoadAniFinish, windowWidth}) {
 
@@ -62,6 +65,15 @@ function Sections({isLoadAniFinish, windowWidth}) {
 
       
         </div> */}
+
+        <section className='section' id='secondSection'>
+
+            <ProjectPage/>
+        </section>
+
+        <section className='section' id='thirdSection'>
+            <ContactPage/>
+        </section>
         </>
         
     );
