@@ -18,12 +18,12 @@ form{
 } */
 
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder { /* Chrome, Firefox, Opera, Safari */
     color: white;
     opacity: 1; /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder { /* Internet Explorer (If someone use it we have a problem) */
     color: white;
 }
 
@@ -80,3 +80,28 @@ form{
     border-radius: 1.25rem; /* Makes the corners of the button rounded */
 
 }
+
+.form-dotted-button #myPhone {
+    --tw-bg-opacity: 1;
+    background-color: rgb(14 165 233 / var(--tw-bg-opacity)) !important;
+
+
+}
+
+#myMailBoxIcon {
+    height: 60px;
+    width: 60px;
+}
+
+#myPhoneIcon{
+
+    height: 60px;
+    width: 60px;
+}
+
+#phoneContainer, #mailContainer{
+
+    background-color: rgba(14, 165, 233);
+
+}
+
