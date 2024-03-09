@@ -8,6 +8,11 @@
     /* text-align: center; */
 }
 
+.profilePic:hover {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
 .profilePicPulse{
     animation : pulse 2.5s infinite;
 }

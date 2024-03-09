@@ -1,4 +1,9 @@
 
+.ProjectPage {
+
+    min-height: 100vh;
+}
+
 
 .secondSectionProject::after {
     content: '⌄';

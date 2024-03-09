@@ -43,6 +43,28 @@
     
 }
 
+.bodyNoScroll {
+    overflow: hidden;
+
+}
+  
+.bodyScroll {
+    overflow: auto;
+}
+
+/* .bodyScroll {
+    overflow: auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+} */
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+/* .bodyScroll::-webkit-scrollbar {
+    display: none; 
+}
+   */
+
+
 /* Phone Settings */
 @media (max-width: 500px) {
     .HomePageLoader {
