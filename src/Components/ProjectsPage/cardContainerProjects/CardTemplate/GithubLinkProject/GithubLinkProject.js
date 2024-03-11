@@ -3,7 +3,7 @@ import './GithubLinkProject.css'
 import { useRef, useEffect} from 'react'
 import { Popover } from 'bootstrap';
 //import RainMatrixEffect from '../../../../../RainMatrixEffect/RainMatrixEffect';
-import fallIcon from './fall.ico'
+//import fallIcon from './fall.ico'
 
 function GithubLinkProject({projectURL, isAndroidCard}) {
 
@@ -35,14 +35,21 @@ function GithubLinkProject({projectURL, isAndroidCard}) {
 //                 </span>
 //         </div> 
         <>
-        {isAndroidCard ? 
-            (
+        {projectURL ? (
+        
+            isAndroidCard ? 
+            
                 <i id='githubIconLinkAndroid' className='ci ci-github-light ci-2x' onClick={() => openInNewTab(projectURL)}></i>
-            ):
-            (
+            :
+            
                 <i id='githubIconLink' className='ci ci-github-light ci-2x' onClick={() => openInNewTab(projectURL)}></i>
-            )
+            
+        ) : (
+            <span id='gitLinkMessageUnavailable'>The code is not public yet</span>
 
+        )
+        
+        
         }
         </>
 

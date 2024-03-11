@@ -89,7 +89,7 @@ function CardContainerProjects({containerCardsRef, scrollPercent}) {
                                     title={epProjectTitle}
                                     description={epProjectDescription}
                                     iconsArr={epProjectIcons}
-                                    //projectURL={leafletURL}
+                                    projectURL={null}
                                     isAndroidCard={false}/>
                 </div>
                 <div className="col">

@@ -61,7 +61,7 @@ form{
 .form-dotted-item {
     border-radius: 0.375rem;
     border: 2px dashed white; /* Sets the button's border to be 2 pixels thick, dashed, and black */
-    background-color: rgb(35, 35, 37, 0.5); /* Sets the background color of the button to white */
+    background-color: rgb(35, 35, 37, 0.5); /* Sets the background color of the field to the theme color */
     font-weight: 600; /* Makes the text semi-bold */
     color: white; /* Sets the text color to black */
     transition: all 0.4s; /* Smooth transition for all changes over 0.3 seconds, enhancing interactive effects */   
@@ -81,12 +81,6 @@ form{
 
 }
 
-.form-dotted-button #myPhone {
-    --tw-bg-opacity: 1;
-    background-color: rgb(14 165 233 / var(--tw-bg-opacity)) !important;
-
-
-}
 
 #myMailBoxIcon {
     height: 60px;
@@ -105,3 +99,18 @@ form{
 
 }
 
+
+.messageSubmitSuccess {
+    font-size: 1.5em;
+    color: rgb(1, 204, 255);
+}
+
+
+@media (max-width:450px) {
+
+    .messageSubmitSuccess {
+        font-size: 1em;
+        color: rgb(1, 204, 255);
+    }
+
+}

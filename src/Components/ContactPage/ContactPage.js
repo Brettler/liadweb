@@ -1,10 +1,16 @@
 
 import './ContactPage.css'
-//import mailBoxIcon from './iconsImg/mailbox2-flag.svg'
-import mailBoxIcon from './iconsImg/icons8-email.png'
-import phoneIcon from './iconsImg/icons8-phone.png'
+
+import { useState } from 'react';
+import {database} from '../../firebaseConfig'
+import { addDoc, collection } from "firebase/firestore";
+import MyInformation from './MyInformation/MyInformation';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 
 function ContactPage() {
+
 
 /* 
 For flex-direction: row (the default):
@@ -25,90 +31,132 @@ align-items: center; will center the children horizontally within the container 
 
 */
 
+    const [username, setUsername] = useState('');
+    const [userEmail, setUserEmail] = useState('');
+    const [userSubject, setUserSubject] = useState('');
+    const [userMessage, setUserMessage] = useState('');
+    const [successMessageSent, setSuccessMessageSent] = useState('Your Message Sent Successfully, Will Be Touch Soon.')
 
-const onSubmit = (e) => {
+    // const messagesCollectionRef = collection(database, 'ContactMessages');
 
-    e.preventDefault();
-    console.log('Form submitted');
+    // // Save the message to firebase
+    // const saveMessage = (username, userEmail, userSubject, userMessage) => {
+
+    //     // Create new object will all out data.
+    //     addDoc(messagesCollectionRef, {
+    //         name: username,
+    //         email: userEmail,
+    //         subject: userSubject,
+    //         message: userMessage
+
+    //     }).then(() => {
+    //         setUsername('');
+    //         setUserEmail('');
+    //         setUserSubject('');
+    //         setUserMessage('');
+    //         setSuccessMessageSent('Your Message Sent Successfully, Will Be Touch Soon.')
 
 
-    console.log(e)
+    //         setTimeout(() => setSuccessMessageSent(''), 5000)
+    //         //alert("Your Message Sent Successfully, Will Be Touch Soon.");
+    //     }).catch((err) => {
+    //         alert(err.message)
+    //     })
 
-}
+    // }
 
-return (
-    <div className="contactPage relative flex flex-col items-center justify-center min-h-screen">
-        <div className='contactTitle absolute text-3xl sm:text-6xl top-0 pt-16 pb-4 text-white'>Contact Me!</div>
+    // // Create new message when the user submit the form
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     saveMessage(username, userEmail, userSubject, userMessage)
+    // }
 
-        <div className='formContainer container flex flex-col items-center justify-center sm:py-24 pt-32 pb-16'>
-            <form className='container grid w-5/6 h-full sm:gap-12 gap-8 sm:m-0 sm:py-12 pr:32 py:6 mt-4' 
-                onSubmit={onSubmit}
-                action='#'>
-                <div className='grid sm:grid-cols-2 grid-cols-1 sm:gap-12 gap-8'>
 
-                    {/* Wrap the input and the icon in a div */}
-                    <div id='phoneContainer' className="form-dotted-item h-10 w-full flex items-center bg-sky-500 rounded-md py-4">
-                        {/* Render the icon */}
-                        <img src={phoneIcon} alt="Mailbox" id='myPhoneIcon' className="mailBoxIcon h-12 w-12 ml-2 mr-2" />
+    const form = useRef();
 
-                        {/* Adjust the input styles */}
-                        <span
-                            type='text'
-                            id='myPhone'
-                            className='flex-1 bg-transparent placeholder-white bg-sky-500'
-                            placeholder='Phone'
-                            autoComplete='off'
 
-                        >
-                        My Phone: (+972) 0547451234
-                        </span>
+    const sendEmail = (e) => {
+      e.preventDefault();
+
+      const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+      const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+      console.log(serviceID);
+      console.log(templateID);
+      console.log(publicKey);
+
+
+      emailjs
+        .sendForm(serviceID, templateID, form.current, {
+          publicKey: publicKey,
+        })
+        .then(
+          () => {
+            setUsername('');
+            setUserEmail('');
+            setUserSubject('');
+            setUserMessage('');
+            setSuccessMessageSent('Your Message Sent Successfully, Will Be Touch Soon.')
+            setTimeout(() => setSuccessMessageSent(''), 5000)
+
+          },
+          (error) => {
+            setSuccessMessageSent(error.text)
+          },
+        );
+    };
+
+
+
+    return (
+        <div className="contactPage relative flex flex-col items-center justify-center min-h-screen">
+            <div className='contactTitle absolute text-3xl sm:text-6xl top-0 sm:pt-12 pt-8 pb-8 text-white'>Contact Me!</div>
+
+            <div className='formContainer container flex flex-col items-center justify-center sm:pb-4 pt-24'>
+                <form className='container grid w-5/6 h-full sm:gap-12 gap-8 sm:m-0 sm:py-12 sm:pt-20 pr:32 py:6 mt-4' 
+                    onSubmit={sendEmail}
+                    ref={form}
+                    action='#'>
+                    <div className='grid sm:grid-cols-2 grid-cols-1 sm:gap-12 gap-8'>
+
+                        <MyInformation/>
+
+                        <input type='text' id='name' className='form-dotted-item h-10 w-full p-4  placeholder-white'
+                                required placeholder='Your Name' autoComplete='off' name="username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
+
+                        <input type='email' id='email' className='form-dotted-item h-10 w-full p-4  placeholder-white'
+                                required placeholder='Your Email Adress' autoComplete='off'  name="userEmail" value={userEmail} onChange={(e) => setUserEmail(e.target.value)}></input>
                     </div>
-
-
-                    {/* Wrap the input and the icon in a div */}
-                    <div id='mailContainer' className="form-dotted-item h-10 w-full flex items-center bg-sky-500 rounded-md py-4">
-                        {/* Render the icon */}
-                        <img src={mailBoxIcon} alt="Mailbox" id='myMailBoxIcon' className="mailBoxIcon h-12 w-12 ml-2 mr-2" />
-
-                        {/* Adjust the input styles */}
-                        <span
-                            type='text'
-                            id='myEmail'
-                            className='flex-1 bg-transparent placeholder-white bg-sky-500'
-                            autoComplete='off'
-
-                        >
-                        E-Mail: liad.brettler@gmail.com
-                        </span>
-                    </div>
-
-
-
-
-
-                    <input type='text' id='name' className='form-dotted-item h-10 w-full p-4  placeholder-white' placeholder='Your Name' autoComplete='off' name="name" ></input>
-
-                    <input type='email' id='email' className='form-dotted-item h-10 w-full p-4  placeholder-white' placeholder='Your Email Adress' autoComplete='off'  name="email" ></input>
-                </div>
-                
-                <div className='flex justify-center'>
-                    <input type='text' id='subject' className='form-dotted-item h-10 sm:w-1/2 w-full p-4 rounded-md  bg-slate-900 text-white placeholder-white' placeholder='Subject' autoComplete='off'  ></input>
-                </div>
-
-                <div className="flex justify-center h-full">
-                    <textarea id='message' className='form-dotted-item text-wrap resize-none sm:w-1/2 w-full p-4 h-40 rounded-md  bg-slate-900 text-white placeholder-white' placeholder="Message" > 
                     
-                    </textarea>
-                </div>
+                    <div className='flex justify-center'>
+                        <input type='text' id='subject' className='form-dotted-item h-10 sm:w-1/2 w-full p-4 rounded-md  bg-slate-900 text-white placeholder-white'
+                                required placeholder='Subject' autoComplete='off' name="userSubject" value={userSubject} onChange={(e) => setUserSubject(e.target.value)}></input>
+                    </div>
 
-                <div className='flex justify-center'>
-                    <button type='submit' id='btnSend' className='form-dotted-button h-12 sm:w-1/2 w-full '>Send</button>
-                </div>
+                    <div className="flex justify-center h-full">
+                        <textarea id='message' className='form-dotted-item text-wrap resize-none sm:w-1/2 w-full p-4 h-40 rounded-md  bg-slate-900 text-white placeholder-white'
+                                required placeholder="Message" name='userMessage' value={userMessage} onChange={(e) => setUserMessage(e.target.value)}> 
+                        
+                        </textarea>
+                    </div>
 
-            </form>
+                    <div className='flex justify-center'>
+                        <button type='submit' id='btnSend' className='form-dotted-button h-12 sm:w-1/2 w-full '>Send</button>
+                    </div>
 
+
+                    <div className='flex justify-center h-20'>
+
+                        <p className='messageSubmitSuccess'>{successMessageSent}</p>
+
+                    </div>
+
+                </form>
+
+
+
+            </div>
         </div>
-    </div>
 
     )
 
