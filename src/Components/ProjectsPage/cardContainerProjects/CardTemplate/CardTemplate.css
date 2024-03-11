@@ -7,7 +7,7 @@
 }
 
 .card{
-  background-color: rgb(35, 35, 37);
+  background-color: var(--darkTheme-color);
   color: white;
   border-radius: 7%;
   width: 330px;
@@ -32,14 +32,14 @@
 .card:hover #githubIconLink{
   opacity: 1;
   z-index: 40;
-  border: 40px rgb(35, 35, 37);
+  border: 40px var(--darkTheme-color);
 
 }
 
 .card:hover #githubIconLinkAndroid{
   opacity: 1;
   z-index: 40;
-  border: 40px rgb(35, 35, 37);
+  border: 40px var(--darkTheme-color);
 }
 
 /* .card:hover #demoIconLink {
