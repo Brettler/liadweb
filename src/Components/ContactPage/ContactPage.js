@@ -2,8 +2,8 @@
 import './ContactPage.css'
 
 import { useState } from 'react';
-import {database} from '../../firebaseConfig'
-import { addDoc, collection } from "firebase/firestore";
+// import {database} from '../../firebaseConfig'
+// import { addDoc, collection } from "firebase/firestore";
 import MyInformation from './MyInformation/MyInformation';
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
@@ -35,7 +35,7 @@ align-items: center; will center the children horizontally within the container 
     const [userEmail, setUserEmail] = useState('');
     const [userSubject, setUserSubject] = useState('');
     const [userMessage, setUserMessage] = useState('');
-    const [successMessageSent, setSuccessMessageSent] = useState('Your Message Sent Successfully, Will Be Touch Soon.')
+    const [successMessageSent, setSuccessMessageSent] = useState('')
 
     // const messagesCollectionRef = collection(database, 'ContactMessages');
 

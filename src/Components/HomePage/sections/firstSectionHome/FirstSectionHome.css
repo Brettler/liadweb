@@ -3,12 +3,12 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 70px 0px;
+    padding: 20px 0px;
     z-index: 1;
 }
 
 #textPicRow {
-    min-width:80vw;
+    min-width:90vw;
 }
 
 
@@ -17,16 +17,17 @@
     display: flex;
     align-items: flex-start; /* Position the text start from top to bottom*/
     text-align: left;
-    height: 80%;
+    /* height: 80%; */
+    min-height: fit-content;
+    padding-top:40px;
 }
 
-#myPic {
+#imageIconsContainer {
     position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 20px 20px 50px;
-    margin: auto;
 }
 
 .empty {
@@ -56,14 +57,77 @@
 }
 
 
+/* Phone settigns*/
+@media (max-width: 1200px) {
+
+    #homeContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0px 0px;
+        z-index: 1;
+    }
+    
+    #textPicRow {
+        min-width:90vw;
+    }
+    
+    
+    #textContainer {
+        color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: fit-content;
+        padding-top:0px;
+    }
+    
+    #imageIconsContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+    }
+    
+    .empty {
+        display: none;
+      }
+    
+    .typingContainer {
+        margin-bottom: 5px;
+    }
+    
+    .title {
+        font-size: 1em;
+    }
+    
+    .myName{
+        font-size: 4em;
+    
+    }
+    
+    .aboutMeMSG{
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    
+    .information {
+        font-size: 1em;
+    }
+}
+
 
 /* Phone settigns*/
-@media (max-width: 850px) {
+@media (max-width: 450px) {
 
     #textPicRow {
         position: relative;
         display: flex;
         height: 70vh;
+        
     }
 
     #menuBar {
@@ -80,10 +144,11 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         text-align: center;
         color: whitesmoke;
-        height: 80%;
+        min-height: fit-content;
+        margin-bottom: 20vh;
     }
 
     .profilePic{
@@ -95,14 +160,14 @@
         
     }
 
-    #myPic {   
+    #imageIconsContainer {   
         position: relative;
         display: flex;
-        align-items: flex-start; /* Control vertical position*/
+        align-items: center; /* Control vertical position*/
         /* padding-right: 4%; */
         padding: 0;
         margin: 0;
-        padding-bottom: 30px;
+        padding-bottom: 0px;
     }
 
 

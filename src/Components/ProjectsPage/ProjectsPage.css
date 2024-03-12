@@ -41,3 +41,12 @@ blueArrow::after {
 darkBlueArrow::after {
     color: #0096C7; /* Dark Blue */
 }
+
+@media (max-width: 450px) {
+
+    .ProjectPage {
+        min-height: 100vh;
+    }
+    
+
+}

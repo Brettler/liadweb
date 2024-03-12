@@ -14,7 +14,6 @@
   display: flex;
   margin: auto;
   transition: transform .2s;
-
 }
 
 .card:hover {
