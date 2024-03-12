@@ -1,11 +1,8 @@
 .profilePic{
-    /* max-height: auto; */
     height: 300px;
-
     object-fit: cover;
     border-radius: 100%;
     border-color: black;
-    /* text-align: center; */
 }
 
 .profilePic:hover {
@@ -30,4 +27,14 @@
         transform : scale(1);
     }
     
+}
+
+@media (max-width: 1200px) {
+
+    .profilePic{
+        height: 250px;
+        object-fit: cover;
+        border-radius: 100%;
+        border-color: black;
+    }
 }

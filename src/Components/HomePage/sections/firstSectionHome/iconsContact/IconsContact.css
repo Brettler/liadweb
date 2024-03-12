@@ -1,0 +1,75 @@
+#contactListIcons{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    /* max-width: 68px; */
+    margin-top: 40px;
+}
+
+
+.ci-contact-home {
+    cursor: pointer !important;
+}
+
+#cardIconsSkillContainer.ci {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.containerGitIconsCI{
+    height: 64px; /* Same height and width as the svg icon. Make all the icons same size*/
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerGmailIconsCI{
+    height: 64px; /* Same height and width as the svg icon. Make all the icons same size*/
+    width: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+
+    #contactListIcons{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        /* max-width: 68px; */
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .ci {
+        padding: 5px;
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    #contactListIcons{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        /* max-width: 68px; */
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+
+    .ci {
+        padding: 5px;
+        cursor: pointer;
+    }
+
+}

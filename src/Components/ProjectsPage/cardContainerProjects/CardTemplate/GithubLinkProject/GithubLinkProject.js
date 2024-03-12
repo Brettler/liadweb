@@ -17,7 +17,7 @@ function GithubLinkProject({projectURL, isAndroidCard}) {
 
     useEffect(() => {
         if (popRef.current) {
-            const popover = new Popover(popRef.current, {
+            new Popover(popRef.current, {
                 container: 'body',
             });
         }
@@ -39,10 +39,10 @@ function GithubLinkProject({projectURL, isAndroidCard}) {
         
             isAndroidCard ? 
             
-                <i id='githubIconLinkAndroid' className='ci ci-github-light ci-2x' onClick={() => openInNewTab(projectURL)}></i>
+                <i id='githubIconLinkAndroid' className='ci ci-github-light ci-2x githubLinkIconProject' onClick={() => openInNewTab(projectURL)}></i>
             :
             
-                <i id='githubIconLink' className='ci ci-github-light ci-2x' onClick={() => openInNewTab(projectURL)}></i>
+                <i id='githubIconLink' className='ci ci-github-light ci-2x githubLinkIconProject' onClick={() => openInNewTab(projectURL)}></i>
             
         ) : (
             <span id='gitLinkMessageUnavailable'>The code is not public yet</span>

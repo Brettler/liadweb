@@ -6,7 +6,7 @@ import './App.css';
 import ProjectsPage from './Components/ProjectsPage/ProjectsPage';
 import Menu from './menuHeader/Menu';
 import ContactPage from './Components/ContactPage/ContactPage';
-import IconsContact from './Components/HomePage/iconsContact/IconsContact';
+import IconsContact from './Components/HomePage/sections/firstSectionHome/iconsContact/IconsContact';
 
 function App() {
 
@@ -22,7 +22,7 @@ function App() {
   return (
     <BrowserRouter>
       <Menu windowWidth={windowWidth}/>
-      <IconsContact/>
+      {/* <IconsContact/> */}
       <Routes>
         <Route path="/" element={<PreLoadAnimation windowWidth={windowWidth}/>}/>
         <Route path='/projects' element={<ProjectsPage/>}/>

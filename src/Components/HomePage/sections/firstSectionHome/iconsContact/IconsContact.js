@@ -2,7 +2,7 @@ import './IconsContact.css'
 import { useRef, useEffect} from 'react'
 
 import { Popover } from 'bootstrap';
-
+import {IconLinkedInSVG} from './IconLinkedInSVG'
 
 function IconsContact() {
 
@@ -25,14 +25,16 @@ function IconsContact() {
       
     return (
             <div id='contactListIcons' className='container'>
-                <div >
-                    <i className="ci ci-github-light ci-2x" onClick={() =>openInNewTab('https://github.com/Brettler')}></i>
-                </div>
                 <div>
-                    <i id='linkedinIconHome' className="ci ci-linkedin-light ci-2x" onClick={() =>openInNewTab('https://www.linkedin.com/in/liad-brettler/')}></i>
+                    <IconLinkedInSVG onClick={()=> openInNewTab('https://www.linkedin.com/in/liad-brettler/')}/>
                 </div>
-                <div>
-                    <i className="ci ci-gmail ci-2x" onClick={() =>openInNewTab('mailto:liad.brettler@gmail.com')}></i>
+                
+                <div className='containerGitIconsCI'>
+                    <i id='gitIconHome' className="ci ci-github-light ci-3x ci-contact-home" onClick={() =>openInNewTab('https://github.com/Brettler')}></i>
+                </div>
+
+                <div className='containerGmailIconsCI'>
+                    <i className="ci ci-gmail ci-3x ci-contact-home" onClick={() =>openInNewTab('mailto:liad.brettler@gmail.com')}></i>
                 </div>
             </div>
     )

@@ -1,10 +1,28 @@
-.cardIconsSkillContainer .ci {
-    margin: 0px 4px; /* Space between right and left side of the icons*/
-    cursor: auto; /* those icons can't be pressed so we keep the same cursor. */
-    width: fit-content; /* Take all the space in the bottom the card (in the footer) */
-}
+/* .cardIconsSkillContainer .ci { */
+  /*  margin: 0px 4px; /* Space between right and left side of the icons*/
+  /*  cursor: auto; /* those icons can't be pressed so we keep the same cursor. */
+  /*  width: fit-content; /* Take all the space in the bottom the card (in the footer) */
+/* } */
 
-#imgIconProjects { /* Make the imgs we used as icons to be in the same line as the icons. */
+/*#imgIconProjects { /* Make the imgs we used as icons to be in the same line as the icons. */
+    /* display: inline;
+    vertical-align: top; 
+} */
+
+.cardIconsSkillContainer {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure icons stay in one line */
+    justify-content: center; /* Center the icons in the container */
+    align-items: center; /* Vertically center the icons */
+  }
+  
+  .ci {
+    margin: 0 2px; /* Space between icons */
+    cursor: auto;
+  }
+  
+  #imgIconProjects {
     display: inline;
     vertical-align: top; 
-}
+  }
+  

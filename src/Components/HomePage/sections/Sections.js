@@ -2,10 +2,9 @@
 import './Sections.css';
 import FirstSection from './firstSectionHome/FirstSectionHome';
 import { useEffect, useRef, useState } from 'react';
-import IconsContact from '../iconsContact/IconsContact';
+import IconsContact from './firstSectionHome/iconsContact/IconsContact';
 import ProjectPage from '../../ProjectsPage/ProjectsPage'
 import ContactPage from '../../ContactPage/ContactPage'
-
 
 function Sections({isLoadAniFinish, windowWidth}) {
 
@@ -39,7 +38,6 @@ function Sections({isLoadAniFinish, windowWidth}) {
     return(
 
         <>
-
         {/* <div className="preSection" id="preSectionMenu">
             <div id ='menuContainer' className='container'>
                 <div className='row justify-content-end'>
