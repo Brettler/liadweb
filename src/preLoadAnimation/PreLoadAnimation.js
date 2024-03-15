@@ -1,14 +1,16 @@
 import React, {useRef, useEffect, useState} from 'react';
 import './PreLoadAnimation.css'
 import Sections from '../Components/HomePage/sections/Sections'
+import useProgressBarScroll from '../customHooks/ProgressBarScroll/useProgressBarScroll';
 
-
-function PreLoadAnimation({windowWidth}) {
+function PreLoadAnimation({windowWidth, updateProgressBarPosition}) {
 
     const refHomePageLoader = useRef(null);
     const [titleRefs, setTitleRefs] = useState([])
     const [isLoadAniFinish, setIsLoadAniFinish] = useState(false);
-    
+    const {ref, scrollPercent , isFullyScrolled} = useProgressBarScroll();
+
+
     useEffect(() => {
         // Prevent scrolling when the load animation is mounts.
         document.body.classList.add('bodyNoScroll');
@@ -77,10 +79,30 @@ function PreLoadAnimation({windowWidth}) {
 
             </div>
         </div>
-        <div>
+        
 
+        {/* The progress bar to be in the top of the container*/}
+        <div className={`scrollProgressContainer ${updateProgressBarPosition ? 'removeOffset' : 'addOffset' }`}>
+            <div className='progressContainer'>
+                <div className='progressFill'
+                    style=
+                        {
+                        windowWidth <= 850 ? 
+                        {width: scrollPercent}
+                        :
+                        {height: scrollPercent}
+                        }> 
+                </div>
+            </div>
+        </div>
+
+        {/* <div className={`arrowScroll ${ isFullyScrolled ? 'hideArrow' : '' }`}>⌄</div> */}
+
+        <div ref={ref} className={`sectionsContainer`}>
             <Sections isLoadAniFinish={isLoadAniFinish}
-                        windowWidth={windowWidth}/>
+                        windowWidth={windowWidth}
+                        isFullyScrolled={isFullyScrolled}
+                        />
         </div>
 
         </>

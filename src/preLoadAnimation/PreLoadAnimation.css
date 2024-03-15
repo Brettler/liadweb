@@ -52,6 +52,7 @@
     overflow: auto;
 }
 
+
 /* .bodyScroll {
     overflow: auto;
     -ms-overflow-style: none; 
@@ -76,3 +77,178 @@
         font-size: 2rem;
     }
 }
+
+
+.scrollProgressContainer{
+    position: fixed;
+    right: 0;
+    margin-right: 27px;
+    display: flex;
+    justify-content: flex-end; /* move to the right side of the screen*/
+    transition: 0.3s ease;
+}
+
+.addOffset{
+    top: 12vh;
+    height: 80%;
+}
+
+.removeOffset{
+    top: 15px;
+    height: 90%;
+}
+
+.arrowScroll {
+    position: fixed;
+    bottom: 7px;
+    right: 0;
+    /* transform: translateX(-20%); */
+    animation:  bounce 1.5s infinite ease-in-out;
+    font-size: 3.8rem;
+    color: #00B4D8;
+    /*transform-origin: center; /* Ensure rotation is around the center */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-7px);
+    }
+}
+
+
+
+.arrowScroll.hideArrow {
+    /* transform: translateX(-50%); */
+    animation: animateRolling 2s forwards ease-out;
+    width: 40px;
+    height: 40px;
+    padding-bottom: 20px;
+    
+}
+
+
+
+.arrowScroll.hideArrow::after {
+    content: '';
+    width: 80px;  
+    height: 80px; 
+    border-radius: 50%;
+    border: 2px dotted white;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    
+}
+
+
+/* Firefox-specific styles */
+@-moz-document url-prefix() {
+    .arrowScroll.hideArrow {
+        /* transform: translateX(-50%); */
+        animation: animateRolling 2s forwards ease-out;
+        width: 40px;
+        height: 40px;
+        padding-bottom:5px;
+    }  
+}
+
+/* When the arrow is in its final state (Almost finish the animation), make the circle visible */
+.arrowScroll.hideArrow::after {
+    animation: showCircle 0.6s forwards;
+    animation-delay: 2s; /* Delay to match end of arrow animation */
+    animation-fill-mode: forwards; /* Keep the final state after the animation completes */
+}
+
+
+@keyframes animateRolling {
+    0% {
+        transform: translateX(0px) rotate(0deg) translateY(0px);
+
+        opacity: 1;
+    }
+    
+    45% {
+        transform: translateX(40px) translateY(0) rotate(180deg);
+        
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-100vw) translateY(0) rotate(270deg);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translateX(-50%) translateY(-30px) rotate(540deg);
+        left: 50%;
+        opacity: 1;
+        color: white;        
+    }
+}
+
+@keyframes showCircle {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+        visibility: hidden;
+    }
+    1% {
+        visibility: visible; /* Make visible only when the animation starts */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+
+@media (max-width: 850px) {
+
+    .scrollProgressContainer{
+        top: 0; /* Stick to the top in small screens*/
+        width: 100%;
+        height: auto; 
+        margin-right: 0;
+        padding-top: 5px;
+        z-index:5000
+    }
+    
+    .addOffset{
+        top: 0vh;
+        height: 0;
+        padding: 0vh 0vh 0vh 0vh;
+    
+    
+    }
+   
+    .removeOffset{
+        top: 0vh;
+        /* padding-bottom: 100px; */
+        height: 0;
+        padding: 0vh 0vh 0vh 0vh;
+    }
+    
+}
+
+/* @media (max-width: 450px) {
+
+    .arrowScroll {
+        display: none;
+        
+    }
+    
+} */

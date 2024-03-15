@@ -25,3 +25,83 @@
     animation: slideDown 1s ease forwards;
 } */
 
+.arrowUpContainer{
+    height: none;
+}
+
+@media(max-width: 450px) {
+
+    .arrowUpContainer{
+        height: 70px;
+    }
+
+    .arrowScroll {
+        position: fixed;
+        bottom: 5px;
+        right: -11px;
+        /* transform: translateX(-20%); */
+        animation:  bounce 1.5s infinite ease-in-out;
+        font-size: 3.5rem;
+        color: #00B4D8;
+        /*transform-origin: center; /* Ensure rotation is around the center */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
+    
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateX(-50%) translateY(0);
+        }
+        40% {
+            transform: translateX(-50%) translateY(-15px);
+        }
+        60% {
+            transform: translateX(-50%) translateY(-7px);
+        }
+    }
+    
+    
+    
+    .arrowScroll.hideArrow {
+        /* transform: translateX(-50%); */
+        animation: animateRolling 2s forwards ease-out;
+        width: 40px;
+        height: 40px;
+        padding-bottom: 20px;
+    }
+
+    /* Firefox-specific styles */
+    @-moz-document url-prefix() {
+        .arrowScroll.hideArrow {
+            /* transform: translateX(-50%); */
+            animation: animateRolling 2s forwards ease-out;
+            width: 40px;
+            height: 40px;
+            padding-bottom:5px;
+        }  
+    }
+
+
+    
+    .arrowScroll.hideArrow::after {
+        content: '';
+        width: 60px;  
+        height: 60px; 
+        border-radius: 50%;
+        border: 2px dotted white;
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    
+    /* When the arrow is in its final state (Almost finish the animation), make the circle visible */
+    .arrowScroll.hideArrow::after {
+        animation: showCircle 0.6s forwards;
+        animation-delay: 2s; /* Delay to match end of arrow animation */
+        animation-fill-mode: forwards; /* Keep the final state after the animation completes */
+    }
+
+}

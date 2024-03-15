@@ -1,23 +1,44 @@
 
 
 .progressContainer{
-    height: 5px;
-    width: 100%;
+    /* height: 5px;
+    width: 100%; */
+    height: 100%;
+    width: 5px;
     background-color: rgba(255, 255, 255, 0.3); /* Slightly visible background */
     border-radius: 5px; /* rounds the corners */    
-    position: relative;
+    /* position: relative;
     top: 0;
-    left: 0;
-    right: 0;
+    bottom: 0; */
+    /* left: 0; */
+    /* right: 0; */
     z-index: 2;
-
-
-
 }
 
 .progressFill {
-    height: 100%;
-    background: linear-gradient(to right, #00B4D8, #0096C7); /* blue gradient */
+    background: linear-gradient(to bottom, #00B4D8, #0096C7); /* blue gradient */
     border-radius: 5px; /* To match the container's radius */
-    height: 100%; /* Full height of the container */
+    width: 100%; /* Full width of the container */
 }
+
+@media (max-width: 850px) {
+
+    .progressContainer{
+        background-color: rgba(255, 255, 255, 0.3); /* Slightly visible background */
+        border-radius: 5px; /* rounds the corners */    
+        width: 100%; /* Full width to stretch across the screen */
+        height: 5px; /* Set a fixed height for the progress bar */
+        position: fixed; /* Fix position to the top of the viewport */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left side */
+        z-index: 2; /* Ensure it is above other content but below the loader if necessary */
+    }
+
+    .progressFill {
+        background: linear-gradient(to right, #00B4D8, #0096C7); /* blue gradient */
+        border-radius: 5px; /* To match the container's radius */
+        height: 100%;
+    }
+    
+}
+

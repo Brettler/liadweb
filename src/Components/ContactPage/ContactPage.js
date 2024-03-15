@@ -113,11 +113,11 @@ align-items: center; will center the children horizontally within the container 
             <div className='contactTitle absolute text-3xl sm:text-6xl top-0 sm:pt-12 pt-8 pb-8 text-white'>Contact Me!</div>
 
             <div className='formContainer container flex flex-col items-center justify-center sm:pb-4 pt-24'>
-                <form className='container grid w-5/6 h-full sm:gap-12 gap-8 sm:m-0 sm:py-12 sm:pt-20 pr:32 py:6 mt-4' 
+                <form className='container grid w-5/6 sm:gap-16 gap-8 sm:m-0 sm:py-12 sm:pb-20 pr:32 py:6' 
                     onSubmit={sendEmail}
                     ref={form}
                     action='#'>
-                    <div className='grid sm:grid-cols-2 grid-cols-1 sm:gap-12 gap-8'>
+                    <div className='grid sm:grid-cols-2 grid-cols-1 sm:gap-16 gap-8'>
 
                         <MyInformation/>
 
@@ -133,7 +133,7 @@ align-items: center; will center the children horizontally within the container 
                                 required placeholder='Subject' autoComplete='off' name="userSubject" value={userSubject} onChange={(e) => setUserSubject(e.target.value)}></input>
                     </div>
 
-                    <div className="flex justify-center h-full">
+                    <div className="flex justify-center">
                         <textarea id='message' className='form-dotted-item text-wrap resize-none sm:w-1/2 w-full p-4 h-40 rounded-md  bg-slate-900 text-white placeholder-white'
                                 required placeholder="Message" name='userMessage' value={userMessage} onChange={(e) => setUserMessage(e.target.value)}> 
                         
@@ -152,9 +152,6 @@ align-items: center; will center the children horizontally within the container 
                     </div>
 
                 </form>
-
-
-
             </div>
         </div>
 

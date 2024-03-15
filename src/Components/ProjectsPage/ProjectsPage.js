@@ -6,7 +6,7 @@ import './ProjectsPage.css'
 //import RainMatrixEffect from '../RainMatrixEffect/RainMatrixEffect'
 function ProjectsPage() {
 
-    const {ref, scrollPercent , isFullyScrolled} = useProgressBarScroll();
+    //const {ref, scrollPercent , isFullyScrolled} = useProgressBarScroll();
 
     return (
         <>
@@ -14,9 +14,8 @@ function ProjectsPage() {
             <div className="firstSectionProject">
                 <TextContainerProjects/>
             </div>
-            <div className={ `secondSectionProject ${ isFullyScrolled ? 'hideArrow' : '' } ` }>
-                <CardContainerProjects containerCardsRef={ref}
-                                        scrollPercent={scrollPercent}/>
+            <div className={ `secondSectionProject` }>
+                <CardContainerProjects/>
             </div>
         </div>
         </>
