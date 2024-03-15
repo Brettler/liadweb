@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import DesktopMenu from './DesktopMenu';
 import './Menu.css'
 
-function Menu({windowWidth}) {
+function Menu({windowWidth, setUpdateProgressBarPosition}) {
 
     const ref = useRef(null);
     const [menuOpacity, setMenuOpacity] = useState(1);
@@ -20,9 +20,12 @@ function Menu({windowWidth}) {
 
             if(currentScrollPos < scrollThreshPos) {
                 ref.current.style.position = 'fixed';
+                setUpdateProgressBarPosition(false);
             } else {
                 ref.current.style.position = 'relative';
+                setUpdateProgressBarPosition(true);
             }
+
             
         });
 

@@ -6,7 +6,7 @@ import IconsContact from './firstSectionHome/iconsContact/IconsContact';
 import ProjectPage from '../../ProjectsPage/ProjectsPage'
 import ContactPage from '../../ContactPage/ContactPage'
 
-function Sections({isLoadAniFinish, windowWidth}) {
+function Sections({isLoadAniFinish, windowWidth, isFullyScrolled}) {
 
     const ref = useRef(null);
     const [menuOpacity, setMenuOpacity] = useState(1);
@@ -34,9 +34,18 @@ function Sections({isLoadAniFinish, windowWidth}) {
     //     return () => window.removeEventListener('scroll', handleMenuPosition);
 
     // }, []);
+
+    const scrollToSection = (sectionID) => {
+
+        const section = document.getElementById(sectionID);
+        if (section) {
+            // Scroll to section
+            section.scrollIntoView({behavior:'smooth', block:'start'})
+        }
+    }
     
     return(
-
+        
         <>
         {/* <div className="preSection" id="preSectionMenu">
             <div id ='menuContainer' className='container'>
@@ -72,6 +81,11 @@ function Sections({isLoadAniFinish, windowWidth}) {
         <section className='section' id='thirdSection'>
             <ContactPage/>
         </section>
+
+        <div className='arrowUpContainer'>
+        <div className={`arrowScroll ${ isFullyScrolled ? 'hideArrow' : '' }`} onClick={() => scrollToSection('firstSection')}>⌄</div>
+
+        </div>
         </>
         
     );

@@ -49,6 +49,16 @@ body {
   }
 }
 
+@media (max-height: 900px) {
+ 
+  body {
+    background: url("dark_backgroundSmaller.jpeg");
+    background-position: center center;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    /* background-color: var(--background-color); */
+  }
+}
 
 
 html::-webkit-scrollbar {

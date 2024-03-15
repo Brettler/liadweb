@@ -5,7 +5,7 @@
 }
 
 
-.secondSectionProject::after {
+/* .secondSectionProject::after {
     content: '⌄';
     position: absolute;
     bottom: 10px;
@@ -13,7 +13,6 @@
     transform: translateX(-50%);
     animation:  bounce 0.8s infinite;
     font-size: 3.8rem;
-    /* color: linear-gradient(to white, #00B4D8, #0096C7); */
     color: #00B4D8;
 }
 
@@ -30,17 +29,17 @@
 }
 
 .secondSectionProject.hideArrow::after {
-    display: none; /* Hide the arrow */
+    display: none;
 }
 
 
 blueArrow::after {
-    color: #00B4D8; /* Blue */
+    color: #00B4D8; 
 }
 
 darkBlueArrow::after {
-    color: #0096C7; /* Dark Blue */
-}
+    color: #0096C7;
+} */
 
 @media (max-width: 450px) {
 

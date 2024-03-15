@@ -3,12 +3,24 @@ import './MenuButtons.css'
 
 function MenuButtons({toggleCanvas}) {
 
+
+    const scrollToSection = (sectionID) => {
+        toggleCanvas(); // Close the canvas menu
+
+
+        const section = document.getElementById(sectionID); // find the id section we need to scroll to.
+        if (section) {
+            // Scroll to section
+            section.scrollIntoView({behavior:'smooth', block:'start'})
+        }
+    }
+
     return (
         <>
-                    <Link to='/' type="button" className="btn dotted-button " onClick={toggleCanvas}>Home</Link>
-                    <button type="button" className="btn dotted-button " onClick={toggleCanvas}>About Me</button>
-                    <Link to='/projects' type="button" className="btn dotted-button " onClick={toggleCanvas}>Projects</Link>
-                    <Link to='/contact' type="button" className="btn dotted-button" onClick={toggleCanvas}>Contact</Link>
+                    <button type="button"  className="btn dotted-button " onClick={()=>scrollToSection('firstSection')}>Home</button>
+                    {/* <button type="button" className="btn dotted-button " onClick={scrollToSection}>About Me</button> */}
+                    <button type="button" className="btn dotted-button " onClick={()=>scrollToSection('secondSection')}>Projects</button>
+                    <button type="button" className="btn dotted-button" onClick={()=>scrollToSection('thirdSection')}>Contact</button>
         </>
 
     )

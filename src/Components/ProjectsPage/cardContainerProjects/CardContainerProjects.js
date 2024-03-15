@@ -12,7 +12,7 @@ import producerConsumerProblemImg from './CardTemplate/projectsImagesCards/produ
 import numpyIcon from './CardTemplate/CardSkillsIcons/iconsImg/numpyIcons/numpylogoicon.svg'
 import pygIcon from './CardTemplate/CardSkillsIcons/iconsImg/pygIcons/pyg_logo.png'
 
-function CardContainerProjects({containerCardsRef, scrollPercent}) {
+function CardContainerProjects() {
 
     const leafletWebTitle = 'Leaflet Chat: Web Platform';
     const leafletWebDescription = 'Explore Leaflet’s demo of a WhatsApp-like application. Register to send messages to friends through our website or mobile app. Our Server will be responsible for clean comunication cross platfrom.';
@@ -58,15 +58,7 @@ function CardContainerProjects({containerCardsRef, scrollPercent}) {
     
     return (
         <>
-
-        {/* The progress bar to be in the top of the container*/}
-        <div id='cardProgressContainer' className='container'>
-            <div className='progressContainer'>
-                <div className='progressFill' style={{width: scrollPercent}}></div>
-            </div>
-        </div>
-
-        <div  ref={containerCardsRef}  id='cardContainer' className="container">
+        <div id='cardContainer' className="container">
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-3 row-cols-1550px-4 g-4">
                 <div className="col">
                     <CardTemplate projectImage={websiteChat2}
