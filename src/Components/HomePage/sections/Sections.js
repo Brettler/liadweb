@@ -68,7 +68,7 @@ function Sections({isLoadAniFinish, windowWidth, isFullyScrolled}) {
 
     const validScrollToSection = (sectionID) => {
         if(arrowRef.current && arrowRef.current.classList.contains('hideArrow')) {
-            ScrollToSection(sectionID);
+            ScrollToSection(sectionID, null);
         }
     }
 
