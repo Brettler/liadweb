@@ -110,6 +110,8 @@
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+    cursor:default;
+
 }
 
 @keyframes bounce {
@@ -124,18 +126,14 @@
     }
 }
 
-
-
 .arrowScroll.hideArrow {
     /* transform: translateX(-50%); */
     animation: animateRolling 2s forwards ease-out;
     width: 40px;
     height: 40px;
     padding-bottom: 20px;
-    
+
 }
-
-
 
 .arrowScroll.hideArrow::after {
     content: '';
@@ -148,9 +146,9 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     opacity: 0;
+
     
 }
-
 
 /* Firefox-specific styles */
 @-moz-document url-prefix() {
@@ -169,6 +167,7 @@
     animation-delay: 2s; /* Delay to match end of arrow animation */
     animation-fill-mode: forwards; /* Keep the final state after the animation completes */
 }
+
 
 
 @keyframes animateRolling {
@@ -194,7 +193,9 @@
         transform: translateX(-50%) translateY(-30px) rotate(540deg);
         left: 50%;
         opacity: 1;
-        color: white;        
+        color: white; 
+        cursor: pointer;
+       
     }
 }
 
@@ -211,6 +212,7 @@
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
         visibility: visible;
+        
     }
 }
 

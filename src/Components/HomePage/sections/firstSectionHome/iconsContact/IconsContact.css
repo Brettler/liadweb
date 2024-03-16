@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     /* max-width: 68px; */
     margin-top: 40px;
 }
@@ -41,7 +41,7 @@
         position: relative;
         display: flex;
         justify-content: center;
-        align-items: end;
+        align-items: flex-end;
         /* max-width: 68px; */
         margin-top: 50px;
         margin-bottom: 50px;
@@ -60,7 +60,7 @@
         position: relative;
         display: flex;
         justify-content: center;
-        align-items: end;
+        align-items: flex-end;
         /* max-width: 68px; */
         margin-top: 20px;
         margin-bottom: 20px;

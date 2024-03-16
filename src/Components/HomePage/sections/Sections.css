@@ -29,6 +29,10 @@
     height: none;
 }
 
+.arrowScroll.clickable {
+    cursor: pointer;
+}
+
 @media(max-width: 450px) {
 
     .arrowUpContainer{
