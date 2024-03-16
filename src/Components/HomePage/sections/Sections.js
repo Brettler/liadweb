@@ -1,15 +1,15 @@
 
 import './Sections.css';
 import FirstSection from './firstSectionHome/FirstSectionHome';
-import { useEffect, useRef, useState } from 'react';
-import IconsContact from './firstSectionHome/iconsContact/IconsContact';
+import { useRef } from 'react';
 import ProjectPage from '../../ProjectsPage/ProjectsPage'
 import ContactPage from '../../ContactPage/ContactPage'
+import ScrollToSection from '../../../utils/ScrollToSection/ScrollToSection';
 
 function Sections({isLoadAniFinish, windowWidth, isFullyScrolled}) {
 
-    const ref = useRef(null);
-    const [menuOpacity, setMenuOpacity] = useState(1);
+    // const ref = useRef(null);
+    // const [menuOpacity, setMenuOpacity] = useState(1);
     // const [firstLoadMenu, setFirstLoadMenu] = useState(true); // This state control the menu
 
     // useEffect( () => {
@@ -35,14 +35,44 @@ function Sections({isLoadAniFinish, windowWidth, isFullyScrolled}) {
 
     // }, []);
 
-    const scrollToSection = (sectionID) => {
+    const arrowRef = useRef(null)
 
-        const section = document.getElementById(sectionID);
-        if (section) {
-            // Scroll to section
-            section.scrollIntoView({behavior:'smooth', block:'start'})
+
+
+    // useEffect(() => {
+
+    //     const arrowCursorClickable = (e) => {
+    //         // When we do the animation of the arrow roling we want the cursor to become clickable.
+    //         if (e.animationName === 'animateRolling') {
+    //             console.log('arrow addevent')
+
+    //             arrowRef.current.classList.add('clickable'); // The class will change the cursor to pointer.
+    //         }
+    //     };
+
+    //     const arrowElement = arrowRef.current;
+    //     if (arrowElement) {
+    //         console.log('arrow addevent')
+    //       arrowElement.addEventListener('animationend', arrowCursorClickable);
+    //     }
+      
+    //     return () => {
+    //       if (arrowElement) {
+    //         console.log('arrow remove event')
+
+    //         arrowElement.removeEventListener('animationend', arrowCursorClickable);
+    //       }
+    //     };
+
+    // },[])
+
+    const validScrollToSection = (sectionID) => {
+        if(arrowRef.current && arrowRef.current.classList.contains('hideArrow')) {
+            ScrollToSection(sectionID);
         }
     }
+
+
     
     return(
         
@@ -83,7 +113,7 @@ function Sections({isLoadAniFinish, windowWidth, isFullyScrolled}) {
         </section>
 
         <div className='arrowUpContainer'>
-        <div className={`arrowScroll ${ isFullyScrolled ? 'hideArrow' : '' }`} onClick={() => scrollToSection('firstSection')}>⌄</div>
+        <div ref={arrowRef} className={`arrowScroll ${ isFullyScrolled ? 'hideArrow' : '' }`} onClick={() => validScrollToSection('firstSection')}>⌄</div>
 
         </div>
         </>

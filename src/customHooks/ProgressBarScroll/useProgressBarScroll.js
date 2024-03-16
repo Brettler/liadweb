@@ -1,11 +1,11 @@
 
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect } from 'react';
 import './useProgressBarScroll.css';
 
 // Custom hook will handle all the progress of the scrolling.
 const useProgressBarScroll = (() => {
 
-    const ref = useRef(null);
+    //const ref = useRef(null);
     const [scrollPercent, setScrollPercent] = useState("0%");
 
     // const handleScroll = () => {
@@ -47,10 +47,10 @@ const useProgressBarScroll = (() => {
     }, []); // This effect should run only once
 
 
-    console.log(scrollPercent);
+    //console.log(scrollPercent);
 
     const isFullyScrolled = scrollPercent === '100%' ; // determain id fully scrolled.
-    console.log(`isFullyScrolled = ${isFullyScrolled}`);
+    // console.log(`isFullyScrolled = ${isFullyScrolled}`);
 
     return { scrollPercent, isFullyScrolled};
 
