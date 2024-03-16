@@ -1,5 +1,7 @@
 .navbar-toggler {
     z-index: 1050;
+    padding-right: 0px; /* BurgerIcon should be in the right edge of the header. */
+
 }
 
 #offcanvasDarkNavbar {

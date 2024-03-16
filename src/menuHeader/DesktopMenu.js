@@ -19,12 +19,10 @@ function DesktopMenu({menuOpacity}) {
             <div ref={canvasRef} className="offcanvas offcanvas-top text-bg-dark" tabIndex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
                 <div className="offcanvas-header">
                     <div className="d-grid gap-5 d-flex justify-content-md-center">
-                            <MenuButtons  toggleCanvas={toggleCanvas}/>
+                            <MenuButtons  toggleCanvas={toggleCanvas}
+                                            headerNavbarRef={false}/> {/* Navbar is used only on small screens so we pass the value false */}
                     </div>
                 </div>
-                {/* <div className="offcanvas-body">
-
-                </div> */}
             </div>
         </>
     )

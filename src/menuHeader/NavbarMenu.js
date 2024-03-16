@@ -1,15 +1,16 @@
 import './NavbarMenu.css'
 import HamburgerMenu from './HamburgerMenu';
-import React from 'react';
+import React, { useRef } from 'react';
 import useOffcanvas from './useOffcanvas';
 import MenuButtons from './MenuButtons';
 
 function NavbarMenu() {
 
     const {canvasRef, isCanvasOpen, toggleCanvas} = useOffcanvas()
+    const headerNavbarRef = useRef(null)
 
     return(
-        <nav id='navbarMenu' className="navbar navbar-dark bg-dark fixed-top">
+        <nav ref={headerNavbarRef} id='navbarMenu' className="navbar navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
                 <a className="navbar-brand">Home</a>
                 <button className="navbar-toggler" type="button" aria-label="Toggle navigation">
@@ -24,7 +25,7 @@ function NavbarMenu() {
                     <div className="offcanvas-body">
                         <div className="navbar-nav gap-5 justify-content-end flex-grow-1 pe-3">
 
-                            <MenuButtons toggleCanvas={toggleCanvas}/>
+                            <MenuButtons toggleCanvas={toggleCanvas} headerNavbarRef={headerNavbarRef}/>
                             
                         </div>
                     </div>

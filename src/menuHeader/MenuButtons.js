@@ -1,30 +1,31 @@
-import {Link} from 'react-router-dom'
 import './MenuButtons.css'
+import ScrollToSection from '../utils/ScrollToSection/ScrollToSection';
+// import { useContext } from 'react';
+// import WindowDimensionsContext from '../Contexts/WindowDimensionsContext/WindowDimensionsContext';
 
-function MenuButtons({toggleCanvas}) {
-
-
-    const scrollToSection = (sectionID) => {
+function MenuButtons({toggleCanvas, headerNavbarRef}) {
+    
+    // const {windowWidth} = useContext(WindowDimensionsContext);
+    // const offsetScroll = 80;
+    const scrollAndToggle = (sectionID) => {
         toggleCanvas(); // Close the canvas menu
+        if (headerNavbarRef.current) {
+            ScrollToSection(sectionID, headerNavbarRef);
+        } else {
+            ScrollToSection(sectionID, false);
 
-
-        const section = document.getElementById(sectionID); // find the id section we need to scroll to.
-        if (section) {
-            // Scroll to section
-            section.scrollIntoView({behavior:'smooth', block:'start'})
         }
     }
 
     return (
         <>
-                    <button type="button"  className="btn dotted-button " onClick={()=>scrollToSection('firstSection')}>Home</button>
-                    {/* <button type="button" className="btn dotted-button " onClick={scrollToSection}>About Me</button> */}
-                    <button type="button" className="btn dotted-button " onClick={()=>scrollToSection('secondSection')}>Projects</button>
-                    <button type="button" className="btn dotted-button" onClick={()=>scrollToSection('thirdSection')}>Contact</button>
+            <button type="button"  className="btn dotted-button " onClick={()=>scrollAndToggle('firstSection')}>Home</button>
+            {/* <button type="button" className="btn dotted-button " onClick={scrollToSection}>About Me</button> */}
+            <button type="button" className="btn dotted-button " onClick={()=>scrollAndToggle('secondSection')}>Projects</button>
+            <button type="button" className="btn dotted-button" onClick={()=>scrollAndToggle('thirdSection')}>Contact</button>
         </>
 
     )
 };
-
 
 export default MenuButtons;
