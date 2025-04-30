@@ -1,4 +1,4 @@
-import profilePic from './profilePic.png'
+import profilePic from './profilePic_1_20.png'
 import './MyIMG.css'
 
 

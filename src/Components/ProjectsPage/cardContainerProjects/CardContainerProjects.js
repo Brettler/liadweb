@@ -4,7 +4,7 @@ import CardTemplate from './CardTemplate/CardTemplate';
 import websiteChat2 from './CardTemplate/projectsImagesCards/leafletWebImg/websiteChat2.png';
 import androidChat from './CardTemplate/projectsImagesCards/leafletAndroidImg/androidChat.png';
 import rumorScreen1Start from './CardTemplate/projectsImagesCards/rumorGame/rumorScreen2Start.png';
-import geneticNNGui from './CardTemplate/projectsImagesCards/geneticNN/geneticNNGui.png';
+import geneticNNGui from './CardTemplate/projectsImagesCards/geneticNN/geneticNNGui_V1.jpeg';
 import geneticAlgoCalssicRes from './CardTemplate/projectsImagesCards/geneticAlgo/geneticAlgoCalssicRes.png';
 import knnCPP from './CardTemplate/projectsImagesCards/knnCPP/knnCPP.jpg'
 import EPFlowChat from './CardTemplate/projectsImagesCards/projectEP/EPFlowChart.jpg'
@@ -20,7 +20,7 @@ function CardContainerProjects() {
     const leafletURL = 'https://github.com/Brettler/Leaflet_Server-Support_Android_and_Website';
 
     const leafletAndroidTitle = 'Leaflet Chat: Android App';
-    const leafletAndroidDescription = 'Discover Leaflet’s demo WhatsApp-like application. Register to seamlessly send messages to friends via our Android application.';
+    const leafletAndroidDescription = 'Explore Leaflet’s Android app for quick, WhatsApp-like messaging. Clone and Run the app for smooth cross-device communication.';
     const androidIcons = ['ci-java ci-2x', 'ci-firebase ci-2x', 'ci-nodejs ci-2x', 'ci-mongodb ci-2x', 'ci-npm ci-2x'];
     const androidURL = 'https://github.com/Brettler/Leaflet_Android';
 

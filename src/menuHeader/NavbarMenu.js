@@ -12,7 +12,7 @@ function NavbarMenu() {
     return(
         <nav ref={headerNavbarRef} id='navbarMenu' className="navbar navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
-                <a className="navbar-brand">Home</a>
+                <div className="navbar-brand">Home</div>
                 <button className="navbar-toggler" type="button" aria-label="Toggle navigation">
                     {/* <span className="navbar-toggler-icon"></span> */}
                     {<HamburgerMenu toggleCanvas={toggleCanvas}

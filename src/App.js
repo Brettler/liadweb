@@ -17,10 +17,25 @@ function App() {
     return () => window.removeEventListener('resize', updateSizeWindow);
   },[]);
   
-  // Responsible to update the progress bar's position (offset) depend on the menu's visibility;
+
+  const [windowDimensions, setWindowDimenstions] = useState({
+    height: window.innerHeight,
+    width: window.innerWidth
+  });
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      setWindowDimenstions({
+        height: window.innerHeight,
+        width: window.innerWidth
+      });
+    };
+    window.addEventListener('resize', updateDimensions);
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
 
   return (
-    <WindowDimensionsContext.Provider value={{ windowWidth }}>
+    <WindowDimensionsContext.Provider value={{ windowDimensions }}>
       <BrowserRouter>
         <Menu windowWidth={windowWidth} setUpdateProgressBarPosition={setUpdateProgressBarPosition}/>
         <Routes>
@@ -28,7 +43,6 @@ function App() {
         </Routes>
       </BrowserRouter>
     </WindowDimensionsContext.Provider>
-
   );
 }
 
