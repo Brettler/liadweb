@@ -16,6 +16,7 @@
 
 html {
   height: 100%; /* Ensure html covers full height */
+  width: 100%;
 }
 
 body {
@@ -41,7 +42,7 @@ body::before {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url("dark_background.jpeg");
+  background: url("dark_background_50.jpeg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

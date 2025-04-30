@@ -32,7 +32,7 @@ function CardTemplate({projectImage, title, description, iconsArr, projectURL, i
                 </div>
             </div>
             ) : (
-            <div className='card h-100'>
+            <div id='regularCard' className='card h-100'>
                 {/*Regular cards view */ }
                 <span className='regularCardImgContainer'>
                     <GithubLinkProject projectURL={projectURL} isAndroidCard={isAndroidCard}/>

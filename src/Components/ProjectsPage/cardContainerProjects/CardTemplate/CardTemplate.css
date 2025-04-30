@@ -148,11 +148,6 @@
     
   }
 
-  #cardAndroidImg{
-    height: 35vh;
-
-    justify-items: center;
-  }
 
   #regulaerCardImg {
     height: 220px;
@@ -174,19 +169,34 @@
   
   #cardAndroidImg{
     position: relative;
-    height: 35vh;
+    height: 300px;
     justify-items: center;
     margin: 0;
+  }
+
+  .matrixCanvas{
+    padding:var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    border-radius: 25px;
+    height: 240px;
+    width:100%;
   }
   
   #androidCard:hover .matrixCanvas { /*  Android Card: MatrixRain settings after hover */
     opacity: 1;
     z-index: 4;
     height: 100%;
-    width: 100%;
+    width: 50%;
     padding: 0;
     margin: 0;
     border-radius: 25px;
+  }
+
+  #regularCard:hover .matrixCanvas {
+    padding:var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    border-radius: 25px;
+    height: fit-content;
+    width:100%;
+
   }
 
 }
