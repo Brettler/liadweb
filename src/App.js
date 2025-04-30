@@ -1,15 +1,27 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import PreLoadAnimation from './preLoadAnimation/PreLoadAnimation';
-import {useState, useEffect} from 'react';
 import './App.css';
 import Menu from './menuHeader/Menu';
 import WindowDimensionsContext from './Contexts/WindowDimensionsContext/WindowDimensionsContext';
+import {
+  useState,
+  useEffect,
+  useCallback
+} from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
 
 
 function App() {
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [updateProgressBarPosition, setUpdateProgressBarPosition] = useState(false); // Height of the menu;
+  const [updateProgressBarPosition, setUpdateProgressBarPositionState] = useState(false);
+
+  const setUpdateProgressBarPosition = useCallback((value) => {
+    setUpdateProgressBarPositionState(value);
+  }, []);
 
   useEffect(() => {
     const updateSizeWindow = () => setWindowWidth(window.innerWidth);

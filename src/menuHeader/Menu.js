@@ -1,8 +1,11 @@
-
 import NavbarMenu from './NavbarMenu';
-import { useEffect, useRef, useState } from 'react';
 import DesktopMenu from './DesktopMenu';
 import './Menu.css'
+import {
+    useEffect,
+    useRef,
+    useState
+} from 'react';
 
 function Menu({windowWidth, setUpdateProgressBarPosition}) {
 
@@ -32,7 +35,7 @@ function Menu({windowWidth, setUpdateProgressBarPosition}) {
         window.addEventListener('scroll', handleMenuPosition);
         return () => window.removeEventListener('scroll', handleMenuPosition);
 
-    }, []);
+    }, [setUpdateProgressBarPosition]);
 
 
     return(
