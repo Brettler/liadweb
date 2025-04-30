@@ -1,6 +1,5 @@
 import './IconsContact.css'
 import { useRef, useEffect} from 'react'
-
 import { Popover } from 'bootstrap';
 import {IconLinkedInSVG} from './IconLinkedInSVG'
 
@@ -16,7 +15,7 @@ function IconsContact() {
 
     useEffect(() => {
         if (popRef.current) {
-            const popover = new Popover(popRef.current, {
+            new Popover(popRef.current, {
                 container: 'body',
             });
         }
