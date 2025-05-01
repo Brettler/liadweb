@@ -1,7 +1,11 @@
-import React, {useRef, useEffect, useState} from 'react';
 import './PreLoadAnimation.css'
 import Sections from '../Components/HomePage/sections/Sections'
 import useProgressBarScroll from '../customHooks/ProgressBarScroll/useProgressBarScroll';
+import {
+    useRef,
+    useEffect,
+    useState
+} from 'react';
 
 function PreLoadAnimation({windowWidth, updateProgressBarPosition}) {
 
@@ -9,7 +13,6 @@ function PreLoadAnimation({windowWidth, updateProgressBarPosition}) {
     const [titleRefs, setTitleRefs] = useState([])
     const [isLoadAniFinish, setIsLoadAniFinish] = useState(false);
     const {ref, scrollPercent , isFullyScrolled} = useProgressBarScroll();
-
 
     useEffect(() => {
         // Prevent scrolling when the load animation is mounts.

@@ -1,5 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import './RainMatrixEffect.css';
+import './RainMatrixEffect.css'
+import {
+  useEffect,
+  useRef
+} from "react"
 
 const MatrixRainingCode = () => {
   const canvasRef = useRef(null);

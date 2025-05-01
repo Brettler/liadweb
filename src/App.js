@@ -30,14 +30,14 @@ function App() {
   },[]);
   
 
-  const [windowDimensions, setWindowDimenstions] = useState({
+  const [windowDimensions, setWindowDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth
   });
 
   useEffect(() => {
     const updateDimensions = () => {
-      setWindowDimenstions({
+      setWindowDimensions({
         height: window.innerHeight,
         width: window.innerWidth
       });
