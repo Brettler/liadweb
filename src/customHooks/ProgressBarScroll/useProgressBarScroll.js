@@ -1,6 +1,8 @@
-
-import {useState, useEffect } from 'react';
 import './useProgressBarScroll.css';
+import {
+    useState,
+    useEffect
+} from 'react';
 
 // Custom hook will handle all the progress of the scrolling.
 const useProgressBarScroll = (() => {

@@ -1,9 +1,12 @@
-import {useEffect, useState, useRef} from 'react';
 import { Offcanvas } from 'bootstrap';
+import {
+    useEffect,
+    useState,
+    useRef
+} from 'react';
 
 // Custom hook for phone and desktop design.
 function useOffcanvas() {
-
     const [isCanvasOpen, setIsCanvasOpen] = useState(false);
     const canvasRef = useRef(null);
     const canvasObjectRef = useRef(null); // Ref to store the Offcanvas instance.

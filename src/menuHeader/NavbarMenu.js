@@ -1,8 +1,8 @@
 import './NavbarMenu.css'
 import HamburgerMenu from './HamburgerMenu';
-import React, { useRef } from 'react';
 import useOffcanvas from './useOffcanvas';
 import MenuButtons from './MenuButtons';
+import { useRef } from 'react';
 
 function NavbarMenu() {
 
@@ -33,6 +33,6 @@ function NavbarMenu() {
             </div>
         </nav>
     );
-};
+}
 
 export default NavbarMenu;

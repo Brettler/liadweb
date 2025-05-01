@@ -1,11 +1,9 @@
-
 import './DesktopMenu.css'
 import HamburgerMenu from './HamburgerMenu';
 import MenuButtons from './MenuButtons';
 import useOffcanvas from './useOffcanvas';
 
 function DesktopMenu({menuOpacity}) {
-
     const {canvasRef, isCanvasOpen, toggleCanvas} = useOffcanvas()
 
     return (
