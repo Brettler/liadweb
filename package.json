@@ -6,6 +6,7 @@
     "start": "webpack serve --config webpack.config.js",
     "build": "webpack --config webpack.config.js",
     "clean": "rm -rf dist node_modules/.cache",
+    "deploy": "npm run build && firebase deploy",
     "test": "jest"
   },
   "dependencies": {
