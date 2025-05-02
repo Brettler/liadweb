@@ -1,6 +1,6 @@
-import PreLoadAnimation from './preLoadAnimation/PreLoadAnimation';
+import PreLoadAnimation from './preLoadAnimation/PreLoadAnimation.js';
 import './App.css';
-import Menu from './menuHeader/Menu';
+import Menu from './menuHeader/Menu.js';
 import WindowDimensionsContext from './Contexts/WindowDimensionsContext/WindowDimensionsContext';
 import {
   useState,

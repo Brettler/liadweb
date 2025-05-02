@@ -78,11 +78,10 @@ function PreLoadAnimation({windowWidth, updateProgressBarPosition}) {
             <div className="LoaderTextContainer">
 
                 <span ref={setSameRef} className='titleIntro'>{'Liad Brettler'}</span>
-                <span ref={setSameRef} className='titleIntro'>{'Software Devloper'}</span>
+                <span ref={setSameRef} className='titleIntro'>{'Software Developer'}</span>
 
             </div>
         </div>
-        
 
         {/* The progress bar to be in the top of the container*/}
         <div className={`scrollProgressContainer ${updateProgressBarPosition ? 'removeOffset' : 'addOffset' }`}>
@@ -105,9 +104,8 @@ function PreLoadAnimation({windowWidth, updateProgressBarPosition}) {
             <Sections isLoadAniFinish={isLoadAniFinish}
                         windowWidth={windowWidth}
                         isFullyScrolled={isFullyScrolled}
-                        />
+            />
         </div>
-
         </>
     )
 

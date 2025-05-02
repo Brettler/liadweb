@@ -17,8 +17,6 @@ form{
 
 } */
 
-
-
 ::placeholder { /* Chrome, Firefox, Opera, Safari */
     color: white;
     opacity: 1; /* Firefox */
@@ -41,7 +39,7 @@ form{
     text-transform: uppercase; /* Transforms the button text to uppercase for visual emphasis */
     color: black; /* Sets the text color to black */
     transition: all 0.3s; /* Smooth transition for all changes over 0.3 seconds, enhancing interactive effects */
-  }
+}
   
 .form-dotted-button:hover {
     transform: translateX(-4px) translateY(-4px); /* Moves the button up and to the left by 4px when hovered */
@@ -55,10 +53,7 @@ form{
     box-shadow: none; /* Removes the shadow effect, making the button appear as if it is pressed down when clicked */
 }
 
-
-
 /* Items in the form */
-
 .form-dotted-item {
     border-radius: 0.375rem;
     border: 2px dashed white; /* Sets the button's border to be 2 pixels thick, dashed, and black */
@@ -72,16 +67,13 @@ form{
     transform: translateX(-4px) translateY(-4px); /* Moves the button up and to the left by 4px when hovered */
     border-radius: 1.25rem; /* Makes the corners of the button rounded */
     border:2px dotted white;
-
 }
 
 .form-dotted-item:focus {
     border:2px solid white;
     outline: none; /* Removes the default browser outline to use the custom border style only */
     border-radius: 1.25rem; /* Makes the corners of the button rounded */
-
 }
-
 
 #myMailBoxIcon {
     height: 60px;
@@ -89,17 +81,13 @@ form{
 }
 
 #myPhoneIcon{
-
     height: 60px;
     width: 60px;
 }
 
 #phoneContainer, #mailContainer{
-
     background-color: rgba(14, 165, 233);
-
 }
-
 
 .messageSubmitSuccess {
     font-size: 1.5em;
@@ -108,10 +96,8 @@ form{
 
 
 @media (max-width:450px) {
-
     .messageSubmitSuccess {
         font-size: 1em;
         color: rgb(1, 204, 255);
     }
-
 }
