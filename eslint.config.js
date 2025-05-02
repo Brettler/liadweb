@@ -38,7 +38,15 @@ export default [
           args: 'none',
           ignoreRestSiblings: true
         }
-      ],
+      ]
+    }
+  },
+  {
+    files: [
+        '**/webpack.config.js',
+      '**/*.config.js'
+    ],
+    rules: {
       '@typescript-eslint/no-require-imports': 'off'
     }
   }
