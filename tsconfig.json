@@ -21,8 +21,6 @@
     "jsx": "react-jsx",
     "noImplicitAny": false
   },
-  "include": [
-    "src"
-  ]
+  "include": ["webpack.config.ts", "src"]
 }
 

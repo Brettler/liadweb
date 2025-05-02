@@ -1,13 +1,12 @@
 
 import './ContactPage.css'
-
 import { useState } from 'react';
-// import {database} from '../../firebaseConfig'
-// import { addDoc, collection } from "firebase/firestore";
 import MyInformation from './MyInformation/MyInformation';
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
+// import {database} from '../../firebaseConfig'
+// import { addDoc, collection } from "firebase/firestore";
 
 function ContactPage() {
 
