@@ -1,8 +1,6 @@
 import profilePic from './profilePic_1_20.png'
 import './MyIMG.css'
 
-
-
 // Check if we want to pulse animation for the image.
 function MyIMG({isFinishTyping}) {
     // If isFinishTyping is false (typing not finished), include the pulse animation.

@@ -11,7 +11,6 @@
     min-width:90vw;
 }
 
-
 #textContainer {
     color: whitesmoke;
     display: flex;
@@ -32,7 +31,7 @@
 
 .empty {
     display: none;
-  }
+}
 
 .typingContainer {
     margin-bottom: 5px;
@@ -44,7 +43,6 @@
 
 .myName{
     font-size: 4em;
-
 }
 
 .aboutMeMSG{
@@ -57,23 +55,21 @@
 }
 
 
-/* Phone settigns*/
+/* Phone settings*/
 @media (max-width: 1200px) {
-
-    #homeContainer{
+    #homeContainer {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         min-height: 100vh;
-        padding: 0px 0px;
+        padding-top: 20vh;
         z-index: 1;
     }
     
     #textPicRow {
         min-width:90vw;
     }
-    
-    
+
     #textContainer {
         color: whitesmoke;
         display: flex;
@@ -94,7 +90,7 @@
     
     .empty {
         display: none;
-      }
+    }
     
     .typingContainer {
         margin-bottom: 5px;
@@ -104,12 +100,12 @@
         font-size: 1em;
     }
     
-    .myName{
+    .myName {
         font-size: 4em;
     
     }
     
-    .aboutMeMSG{
+    .aboutMeMSG {
         font-size: 2em;
         margin-bottom: 10px;
     }
@@ -120,14 +116,12 @@
 }
 
 
-/* Phone settigns*/
+/* Phone settings*/
 @media (max-width: 450px) {
-
     #textPicRow {
         position: relative;
         display: flex;
         height: 70vh;
-        
     }
 
     #menuBar {
@@ -137,7 +131,6 @@
         padding-right: 5.6vh;
         padding-left: 5vh;
         z-index: 5;
-
     }
 
     #textContainer {
@@ -151,13 +144,12 @@
         margin-bottom: 20vh;
     }
 
-    .profilePic{
+    .profilePic {
         height: 20vh;
         width: 20vh;
         object-fit: cover;
         border-radius: 100%;
         border-color: black;
-        
     }
 
     #imageIconsContainer {   
@@ -170,19 +162,16 @@
         padding-bottom: 0px;
     }
 
-
     .title {
         font-size: 1em;
     }
     
-    .myName{
+    .myName {
         font-size: 3em;
         font-weight: bold;
-
-    
     }
     
-    .aboutMeMSG{
+    .aboutMeMSG {
         font-size: 1.3em;
         margin-bottom: 10px;
     }
