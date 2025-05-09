@@ -14,4 +14,3 @@ function HamburgerMenu({toggleCanvas, isActive}) {
 }
 
 export default HamburgerMenu;
-

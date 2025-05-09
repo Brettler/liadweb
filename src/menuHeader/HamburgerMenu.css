@@ -1,5 +1,3 @@
-
-
 .burgerContainer {
     position: relative;
     display: flex;
@@ -9,8 +7,6 @@
     z-index: 2000; /* Ensure the burger menu is above other elements on the page. */
 }
 
-
-
 .burgerIcon {
     display: flex;
     position: relative; /* allow absolute positioning of span elements (the pattys of the burger icon) relative to this container. */
@@ -18,7 +14,7 @@
     height: 60px;
     margin: auto; /* Centers the icon within the container */
     align-items: center; /* Vertically aligns the spans in the center of the current element */
-    transform: rotate(0); /* Initalize state without rotation */
+    transform: rotate(0); /* Initialize state without rotation */
     transition: 1s ease; /* Animate smoothly over 1 sec */
 }
 
@@ -47,11 +43,8 @@
         box-shadow:
                     0 0 3px white,
                     0 0 8px white;
-
         transition: 0.3s;
         transition-delay: 1s;
-        
-
 }
 
 .burgerIcon span:nth-child(1) {
@@ -59,16 +52,13 @@
     left: 0;
     width: 100%;
     transform: translateY(0);
-
 }
 
 .burgerContainer.active span:nth-child(1){
     width: 100%;
     transform: translateY(2.5vh);
     transition-delay: 0s;
-
 }
-
 
 .burgerIcon span:nth-child(2) {
     width: 100%;
@@ -80,8 +70,6 @@
     transform: scaleX(0); /* Disapear from x axsis*/
     opacity: 0;
     transition-delay: 0s;
-
-
 }
 
 .burgerIcon span:nth-child(3) {
@@ -96,12 +84,10 @@
     width: 100%;
     transform: rotate(90deg);
     transition-delay: 0s;
-
 }
 
 /* Phone Settings */
 @media (max-width: 850px) {
-
     .burgerContainer {
         display: flex;
         position: relative;
@@ -110,11 +96,9 @@
         width: 5vh;
         height: 5vh;
         background:none;
-    
         box-shadow: none;
         border-radius: 20%;
         cursor: pointer;
-    
     }
     
     .burgerIcon {
@@ -141,7 +125,6 @@
 
     .burgerContainer.active .burgerIcon {
         transform: rotate(315deg);
-    
     }
     
     .burgerIcon span {
@@ -154,10 +137,8 @@
             box-shadow: 
                         0 0 2px white,
                         0 0 p6x white;
-    
             transition: .3s;
             transition-delay: 1s;
-    
     }
     
     .burgerIcon span:nth-child(1) {
@@ -165,19 +146,15 @@
         left: 0;
         width: 50%; /* Length of the patty in the burger*/
         transform: translateY(0);
-    
     }
     
     .burgerContainer.active span:nth-child(1){
         top: 0;
-
         width: 100%;
         transform: translateY(14px);
         transition-delay: 0s;
-    
     }
-    
-    
+
     .burgerIcon span:nth-child(2) {
         width: 100%;
         transform: scaleX(1);
@@ -185,11 +162,9 @@
     }
     
     .burgerContainer.active span:nth-child(2){
-        transform: scaleX(0); /* Disapear from x axsis*/
+        transform: scaleX(0); /* Disappear from x axsis*/
         opacity: 0;
         transition-delay: 0s;
-    
-    
     }
     
     .burgerIcon span:nth-child(3) {
@@ -199,17 +174,14 @@
         transform: rotate(0);
     }
     
-    
     .burgerContainer.active span:nth-child(3) {
         bottom: 17px;
         width: 100%;
         transform: rotate(90deg);
         transition-delay: 0s;
-    
     }
 
     .navbar-toggler {
         border:none;
     }
-    
 }

@@ -4,10 +4,13 @@ import MenuButtons from './MenuButtons';
 import useOffcanvas from './useOffcanvas';
 
 function DesktopMenu({menuOpacity}) {
-    const {canvasRef, isCanvasOpen, toggleCanvas} = useOffcanvas()
+    const {
+        canvasRef,
+        isCanvasOpen,
+        toggleCanvas
+    } = useOffcanvas()
 
     return (
-
         <>
             <button id='burgerDeskMenuIconToggler' className="navbar-toggler" type="button" aria-label="Toggle navigation" style={{opacity: menuOpacity}}>
                 <HamburgerMenu toggleCanvas={toggleCanvas}
@@ -18,13 +21,13 @@ function DesktopMenu({menuOpacity}) {
                 <div className="offcanvas-header">
                     <div className="d-grid gap-5 d-flex justify-content-md-center">
                             <MenuButtons  toggleCanvas={toggleCanvas}
-                                            headerNavbarRef={false}/> {/* Navbar is used only on small screens so we pass the value false */}
+                                            headerNavbarRef={false}
+                            /> {/* Navbar is used only on small screens, so we pass the value false */}
                     </div>
                 </div>
             </div>
         </>
     )
-
 }
 
 export default DesktopMenu;
