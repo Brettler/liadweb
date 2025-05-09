@@ -4,9 +4,9 @@ import ScrollToSection from '../utils/ScrollToSection/ScrollToSection';
 // import WindowDimensionsContext from '../Contexts/WindowDimensionsContext/WindowDimensionsContext';
 
 function MenuButtons({toggleCanvas, headerNavbarRef}) {
-    
     // const {windowWidth} = useContext(WindowDimensionsContext);
     // const offsetScroll = 80;
+
     const scrollAndToggle = (sectionID) => {
         toggleCanvas(); // Close the canvas menu
         if (headerNavbarRef.current) {
@@ -26,6 +26,6 @@ function MenuButtons({toggleCanvas, headerNavbarRef}) {
         </>
 
     )
-};
+}
 
 export default MenuButtons;
