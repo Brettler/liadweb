@@ -5,14 +5,12 @@ import { Popover } from 'bootstrap';
 //import RainMatrixEffect from '../../../../../RainMatrixEffect/RainMatrixEffect';
 //import fallIcon from './fall.ico'
 
-function GithubLinkProject({projectURL, isAndroidCard}) {
-
+function GithubLinkProject({projectURL, isVerticalImage}) {
     const popRef = useRef(null)
 
     const openInNewTab = (url) => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
         if (newWindow) newWindow.opener = null
-
     }
 
     useEffect(() => {
@@ -36,25 +34,16 @@ function GithubLinkProject({projectURL, isAndroidCard}) {
 //         </div> 
         <>
         {projectURL ? (
-        
-            isAndroidCard ? 
-            
+            isVerticalImage ?
                 <i id='githubIconLinkAndroid' className='ci ci-github-light ci-2x githubLinkIconProject' onClick={() => openInNewTab(projectURL)}></i>
             :
-            
                 <i id='githubIconLink' className='ci ci-github-light ci-2x githubLinkIconProject' onClick={() => openInNewTab(projectURL)}></i>
-            
         ) : (
             <span id='gitLinkMessageUnavailable'>The code is not public yet</span>
-
         )
-        
-        
         }
         </>
-
     )
-
 }
 
 export default GithubLinkProject;
