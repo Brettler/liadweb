@@ -1,12 +1,8 @@
-
 #preSectionMenu {
     position: absolute;
     width: 100%;
     padding-bottom: 15px;
-
 }
-
-
 
 #menuContainer {
     display: flex;
@@ -17,5 +13,3 @@
     max-width: 100%;
     height: 12vh;
 }
-
-

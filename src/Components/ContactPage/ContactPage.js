@@ -97,7 +97,6 @@ align-items: center; will center the children horizontally within the container 
             setUserMessage('');
             setSuccessMessageSent('Your Message Sent Successfully, Will Be Touch Soon.')
             setTimeout(() => setSuccessMessageSent(''), 5000)
-
           },
           (error) => {
             setSuccessMessageSent(error.text)
@@ -121,35 +120,40 @@ align-items: center; will center the children horizontally within the container 
                         <MyInformation/>
 
                         <input type='text' id='name' className='form-dotted-item h-10 w-full p-4  placeholder-white'
-                                required placeholder='Your Name' autoComplete='off' name="username" value={username} onChange={(e) => setUsername(e.target.value)}></input>
+                                required placeholder='Your Name' autoComplete='off' name="username" value={username}
+                               onChange={(e) => setUsername(e.target.value)}>
+                        </input>
 
                         <input type='email' id='email' className='form-dotted-item h-10 w-full p-4  placeholder-white'
-                                required placeholder='Your Email Adress' autoComplete='off'  name="userEmail" value={userEmail} onChange={(e) => setUserEmail(e.target.value)}></input>
+                                required placeholder='Your Email Adress' autoComplete='off'  name="userEmail" value={userEmail}
+                               onChange={(e) => setUserEmail(e.target.value)}>
+
+                        </input>
                     </div>
                     
                     <div className='flex justify-center'>
                         <input type='text' id='subject' className='form-dotted-item h-10 sm:w-1/2 w-full p-4 rounded-md  bg-slate-900 text-white placeholder-white'
-                                required placeholder='Subject' autoComplete='off' name="userSubject" value={userSubject} onChange={(e) => setUserSubject(e.target.value)}></input>
+                                required placeholder='Subject' autoComplete='off' name="userSubject" value={userSubject}
+                               onChange={(e) => setUserSubject(e.target.value)}>
+                        </input>
                     </div>
 
                     <div className="flex justify-center">
                         <textarea id='message' className='form-dotted-item text-wrap resize-none sm:w-1/2 w-full p-4 h-40 rounded-md  bg-slate-900 text-white placeholder-white'
-                                required placeholder="Message" name='userMessage' value={userMessage} onChange={(e) => setUserMessage(e.target.value)}> 
-                        
+                                required placeholder="Message" name='userMessage' value={userMessage}
+                                  onChange={(e) => setUserMessage(e.target.value)}>
                         </textarea>
                     </div>
 
                     <div className='flex justify-center'>
-                        <button type='submit' id='btnSend' className='form-dotted-button h-12 sm:w-1/2 w-full '>Send</button>
+                        <button type='submit' id='btnSend' className='form-dotted-button h-12 sm:w-1/2 w-full '>
+                            Send
+                        </button>
                     </div>
-
 
                     <div className='flex justify-center h-20'>
-
                         <p className='messageSubmitSuccess'>{successMessageSent}</p>
-
                     </div>
-
                 </form>
             </div>
         </div>
