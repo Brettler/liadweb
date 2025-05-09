@@ -18,7 +18,6 @@ export const projectsData = [
         description: 'Explore Leaflet’s demo of a WhatsApp-like application. Register to send messages to friends through our website or mobile app. Our Server will be responsible for clean comunication cross platfrom.',
         iconsArr: ['ci-js-light ci-2x', 'ci-reactjs ci-2x', 'ci-nodejs ci-2x', 'ci-mongodb ci-2x', 'ci-npm ci-2x', 'ci-bootstrap ci-2x', 'ci-css ci-2x', 'ci-html ci-2x'],
         projectURL: 'https://github.com/Brettler/Leaflet_Server-Support_Android_and_Website',
-        isAndroidCard: false
     },
     {
         projectImage: androidChat,
@@ -26,7 +25,7 @@ export const projectsData = [
         description: 'Explore Leaflet’s Android app for quick, WhatsApp-like messaging. Clone and Run the app for smooth cross-device communication.',
         iconsArr: ['ci-java ci-2x', 'ci-firebase ci-2x', 'ci-nodejs ci-2x', 'ci-mongodb ci-2x', 'ci-npm ci-2x'],
         projectURL: 'https://github.com/Brettler/Leaflet_Android',
-        isAndroidCard: true
+        isVerticalImage: true
     },
     {
         projectImage: EPFlowChat,
@@ -34,7 +33,6 @@ export const projectsData = [
         description: 'Developed a ML model that can classify drugs by their mechanisms through Graph Neural Networks employing a Large Language Model. This project won an award of Certificate of Excellence.',
         iconsArr: ['ci-python ci-2x', 'ci-pytorch ci-2x', pygIcon, numpyIcon],
         projectURL: null,
-        isAndroidCard: false
     },
     {
         projectImage: rumorScreen1Start,
@@ -42,7 +40,6 @@ export const projectsData = [
         description: 'Rumor Spreading game is a varient of "Game Of Life" that was devised by the mathematician John Horton Conway.',
         iconsArr: ['ci-python ci-2x', numpyIcon],
         projectURL: 'https://github.com/Brettler/Rumor_Spreading_Model',
-        isAndroidCard: false
     },
     {
         projectImage: geneticNNGui,
@@ -50,7 +47,6 @@ export const projectsData = [
         description: 'This project domnstrate the effectivness of training nueural network for binary classification using genetic algorithm instead of the mainsteam training methods.',
         iconsArr: ['ci-python ci-2x', numpyIcon],
         projectURL: 'https://github.com/Brettler/Leaflet_Server-Support_Android_and_Website',
-        isAndroidCard: false
     },
     {
         projectImage: geneticAlgoCalssicRes,
@@ -58,7 +54,6 @@ export const projectsData = [
         description: 'This project shows differents approches for genetic algorithms that will decipher mono-alphabetic cipher.',
         iconsArr: ['ci-python ci-2x', numpyIcon],
         projectURL: 'https://github.com/Brettler/Neural_Network_Genetic_Algorithm',
-        isAndroidCard: false
     },
     {
         projectImage: knnCPP,
@@ -66,7 +61,6 @@ export const projectsData = [
         description: 'A C++ server-client system leveraging the Command design pattern and CLI over TCP. Simultaneous multi-client handling with socket-based communication.',
         iconsArr: ['ci-cpp ci-2x'],
         projectURL: 'https://github.com/Brettler/KNN---Client_Server-TCP',
-        isAndroidCard: false
     },
     {
         projectImage: producerConsumerProblemImg,
@@ -74,6 +68,5 @@ export const projectsData = [
         description: 'A C program simulating the producer-consumer problem, as described by Edsger Dijkstra.',
         iconsArr: ['ci-c ci-2x'],
         projectURL: 'https://github.com/Brettler/Consumer_Producer_Problem',
-        isAndroidCard: false
     }
 ]

@@ -1,4 +1,3 @@
-
 #androidRow{
   justify-content: center;
   align-items: center;
@@ -20,7 +19,7 @@
   transform: scale(1.1) /* 110% zoom*/
 }
 
-.card:hover #regulaerCardImg{ /* When the user hover the card we make the image darker and show github link for the project */
+.card:hover #regularCardImg{ /* When the user hover the card we make the image darker and show github link for the project */
   opacity: 0;
 }
 
@@ -32,7 +31,6 @@
   opacity: 1;
   z-index: 40;
   border: 40px var(--darkTheme-color);
-
 }
 
 .card:hover #githubIconLinkAndroid{
@@ -45,9 +43,7 @@
   opacity: 1;
   z-index: 50;
   border: 40px rgb(35, 35, 37);
-
 } */
-
 
 #githubIconLink:hover{
   transform: scale(1.3);
@@ -58,7 +54,6 @@
   transform: scale(1.3);
   opacity: 1;
 }
-
 
 #demoIconLink {
   /* background-image: url('./GithubLinkProject/fall.JPG'); */
@@ -75,24 +70,21 @@
   transform:  scale(1.3);
   opacity: 1;
   padding: 5px;
-
 }
 
 .regularCardImgContainer{
   display: flex;
   flex-direction: row;
-  justify-content: center; /* Effects vertical aligment */
-  align-items: center; /* Effects horizantal aligment */
-
+  justify-content: center; /* Effects vertical alignment */
+  align-items: center; /* Effects horizontal alignment */
 }
 
 #androidImgContainer{
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Effects horizantal aligment */
-  align-items: center; /* Effects vertical aligment */
-
+  justify-content: center; /* Effects horizontal alignment */
+  align-items: center; /* Effects vertical alignment */
 }
 
 #cardAndroidImg{
@@ -106,11 +98,10 @@
   z-index: 4;
   height: 100%;
   width: 100%;
-  padding: 5px 0px 14px 10px;
+  padding: 5px 0 14px 10px;
   margin: 0;
   border-radius: 25px;
 }
-
 
 .matrixCanvas{
   padding:var(--bs-card-spacer-y) var(--bs-card-spacer-x);
@@ -119,7 +110,7 @@
   width:100%;
 }
 
-#regulaerCardImg {
+#regularCardImg {
   padding:var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   border-radius: 25px;
   height: 240px;
@@ -130,43 +121,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
-
-/* Phone settigns*/
-@media (max-width: 450px) {
-
-
-  .card{
-    background-color: rgb(35, 35, 37);
-    color: white;
-    border-radius: 7%;
-    width: 90%;
-    height: 50vh;
-    margin: auto;
-    
-  }
-
-
-  #regulaerCardImg {
-    height: 220px;
-  }
-
-  .card-body {
-    display: grid;
-    text-align: center;
-  }
-
-  #androidImgContainer{
+@media (max-width: 767px) {
+   #androidImgContainer{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Effects horizantal aligment */
-    align-items: center; /* Effects vertical aligment */
-  
+    justify-content: center; /* Effects horizontal alignment */
+    align-items: center; /* Effects vertical alignment */
   }
-  
+
   #cardAndroidImg{
     position: relative;
     height: 300px;
@@ -178,9 +143,9 @@
     padding:var(--bs-card-spacer-y) var(--bs-card-spacer-x);
     border-radius: 25px;
     height: 240px;
-    width:100%;
+    width: 50%;
   }
-  
+
   #androidCard:hover .matrixCanvas { /*  Android Card: MatrixRain settings after hover */
     opacity: 1;
     z-index: 4;
@@ -196,7 +161,65 @@
     border-radius: 25px;
     height: fit-content;
     width:100%;
+  }
+}
 
+/* Phone settings*/
+@media (max-width: 450px) {
+  .card{
+    background-color: rgb(35, 35, 37);
+    color: white;
+    border-radius: 7%;
+    width: 90%;
+    height: 50vh;
+    margin: auto;
   }
 
+  #regularCardImg {
+    height: 220px;
+  }
+
+  .card-body {
+    display: grid;
+    text-align: center;
+  }
+
+  #androidImgContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Effects horizontal alignment */
+    align-items: center; /* Effects vertical alignment */
+  }
+
+  #cardAndroidImg{
+    position: relative;
+    height: 300px;
+    justify-items: center;
+    margin: 0;
+  }
+
+  .matrixCanvas{
+    padding:var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    border-radius: 25px;
+    height: 240px;
+    width: 50%;
+  }
+
+  #androidCard:hover .matrixCanvas { /*  Android Card: MatrixRain settings after hover */
+    opacity: 1;
+    z-index: 4;
+    height: 100%;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    border-radius: 25px;
+  }
+
+  #regularCard:hover .matrixCanvas {
+    padding:var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    border-radius: 25px;
+    height: fit-content;
+    width:100%;
+  }
 }

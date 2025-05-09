@@ -3,21 +3,26 @@ import CardSkillsIcons from './CardSkillsIcons/CardSkillsIcons'
 import GithubLinkProject from './GithubLinkProject/GithubLinkProject';
 import RainMatrixEffect from '../../../../RainMatrixEffect/RainMatrixEffect';
 
-function CardTemplate({projectImage, title, description, iconsArr, projectURL, isAndroidCard}) {
-
+function CardTemplate({
+                          projectImage,
+                          title,
+                          description,
+                          iconsArr,
+                          projectURL,
+                          isVerticalImage
+}) {
     return(
         <>
             {
-            isAndroidCard ? 
+                isVerticalImage ?
             (
             <div id='androidCard' className="card mb-3 h-100">
                 <div id='androidRow' className="row g-0">
                   <div id='androidImgContainer' className="col-md-5">
-                    <GithubLinkProject projectURL={projectURL} isAndroidCard={isAndroidCard}/>
+                    <GithubLinkProject projectURL={projectURL} isVerticalImage={isVerticalImage}/>
                     <RainMatrixEffect/>
 
                     <img id='cardAndroidImg' src={projectImage} className="img-fluid rounded-center" alt={title}/>                    
-                   
 
                   </div>
                   <div className="col-md-7">
@@ -35,10 +40,10 @@ function CardTemplate({projectImage, title, description, iconsArr, projectURL, i
             <div id='regularCard' className='card h-100'>
                 {/*Regular cards view */ }
                 <span className='regularCardImgContainer'>
-                    <GithubLinkProject projectURL={projectURL} isAndroidCard={isAndroidCard}/>
+                    <GithubLinkProject projectURL={projectURL} isVerticalImage={isVerticalImage}/>
                     <RainMatrixEffect/>
 
-                    <img id ='regulaerCardImg' src={projectImage} className="card-img-top" alt={{title}}/>
+                    <img id ='regularCardImg' src={projectImage} className="card-img-top" alt={{title}}/>
                 </span>
 
                 <div className="card-body">

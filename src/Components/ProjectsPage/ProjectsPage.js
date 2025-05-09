@@ -1,11 +1,11 @@
 import CardContainerProjects from "./cardContainerProjects/CardContainerProjects";
 import TextContainerProjects from "./textContainerProjects/TextContainerProjects";
-//import useProgressBarScroll from '../customHooks/ProgressBarScroll/useProgressBarScroll'
-// import useProgressBarScroll from '../../customHooks/ProgressBarScroll/useProgressBarScroll';
 import './ProjectsPage.css'
 //import RainMatrixEffect from '../RainMatrixEffect/RainMatrixEffect'
-function ProjectsPage() {
+//import useProgressBarScroll from '../customHooks/ProgressBarScroll/useProgressBarScroll'
+// import useProgressBarScroll from '../../customHooks/ProgressBarScroll/useProgressBarScroll';
 
+function ProjectsPage() {
     //const {ref, scrollPercent , isFullyScrolled} = useProgressBarScroll();
 
     return (

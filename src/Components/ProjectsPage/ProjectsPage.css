@@ -1,9 +1,6 @@
-
 .ProjectPage {
-
     min-height: 100vh;
 }
-
 
 /* .secondSectionProject::after {
     content: '⌄';
@@ -32,7 +29,6 @@
     display: none;
 }
 
-
 blueArrow::after {
     color: #00B4D8; 
 }
@@ -42,10 +38,7 @@ darkBlueArrow::after {
 } */
 
 @media (max-width: 450px) {
-
     .ProjectPage {
         min-height: 100vh;
     }
-    
-
 }
