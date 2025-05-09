@@ -1,4 +1,4 @@
-.profilePic{
+.profilePic {
     height: 300px;
     object-fit: cover;
     border-radius: 100%;
@@ -10,7 +10,7 @@
     filter: grayscale(100%);
 }
 
-.profilePicPulse{
+.profilePicPulse {
     animation : pulse 2.5s infinite;
 }
 
@@ -26,12 +26,10 @@
     100% {
         transform : scale(1);
     }
-    
 }
 
 @media (max-width: 1200px) {
-
-    .profilePic{
+    .profilePic {
         height: 250px;
         object-fit: cover;
         border-radius: 100%;
