@@ -8,8 +8,6 @@ module.exports = {
       fontFamily: {
         ubuntuFont: ['Ubuntu']
       }
-
-      
     },
   },
   plugins: [],

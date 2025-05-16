@@ -1,13 +1,11 @@
-
 import './Sections.css';
 import FirstSection from './firstSectionHome/FirstSectionHome';
-import { useRef } from 'react';
 import ProjectPage from '../../ProjectsPage/ProjectsPage'
 import ContactPage from '../../ContactPage/ContactPage'
 import ScrollToSection from '../../../utils/ScrollToSection/ScrollToSection';
+import {useRef} from 'react';
 
 function Sections({isLoadAniFinish, windowWidth, isFullyScrolled}) {
-
     // const ref = useRef(null);
     // const [menuOpacity, setMenuOpacity] = useState(1);
     // const [firstLoadMenu, setFirstLoadMenu] = useState(true); // This state control the menu
@@ -27,7 +25,7 @@ function Sections({isLoadAniFinish, windowWidth, isFullyScrolled}) {
     //         } else {
     //             ref.current.style.position = 'relative';
     //         }
-            
+
     //     });
 
     //     window.addEventListener('scroll', handleMenuPosition);
@@ -36,7 +34,6 @@ function Sections({isLoadAniFinish, windowWidth, isFullyScrolled}) {
     // }, []);
 
     const arrowRef = useRef(null)
-
 
 
     // useEffect(() => {
@@ -55,7 +52,7 @@ function Sections({isLoadAniFinish, windowWidth, isFullyScrolled}) {
     //         console.log('arrow addevent')
     //       arrowElement.addEventListener('animationend', arrowCursorClickable);
     //     }
-      
+
     //     return () => {
     //       if (arrowElement) {
     //         console.log('arrow remove event')
@@ -67,17 +64,16 @@ function Sections({isLoadAniFinish, windowWidth, isFullyScrolled}) {
     // },[])
 
     const validScrollToSection = (sectionID) => {
-        if(arrowRef.current && arrowRef.current.classList.contains('hideArrow')) {
+        if (arrowRef.current && arrowRef.current.classList.contains('hideArrow')) {
             ScrollToSection(sectionID, null);
         }
     }
 
 
-    
-    return(
-        
+    return (
+
         <>
-        {/* <div className="preSection" id="preSectionMenu">
+            {/* <div className="preSection" id="preSectionMenu">
             <div id ='menuContainer' className='container'>
                 <div className='row justify-content-end'>
                     <div ref={ref} id='menuBar' className='col-xxl-1 col-xl-1 col-lg-1 col-md-2 col-sm-2 col-2'
@@ -90,12 +86,12 @@ function Sections({isLoadAniFinish, windowWidth, isFullyScrolled}) {
                 </div>
             </div>
         </div> */}
-        <section className='section' id="firstSection">
-            <FirstSection isLoadAniFinish={isLoadAniFinish}/>         
-        </section>
+            <section className='section' id="firstSection">
+                <FirstSection isLoadAniFinish={isLoadAniFinish}/>
+            </section>
 
 
-        {/* <div className='section' id="secondSection">
+            {/* <div className='section' id="secondSection">
             <SecondSection/>
         </div>
         <div className='section' id="thirdSection">
@@ -103,22 +99,23 @@ function Sections({isLoadAniFinish, windowWidth, isFullyScrolled}) {
       
         </div> */}
 
-        <section className='section' id='secondSection'>
+            <section className='section' id='secondSection'>
+                <ProjectPage/>
+            </section>
 
-            <ProjectPage/>
-        </section>
+            <section className='section' id='thirdSection'>
+                <ContactPage/>
+            </section>
 
-        <section className='section' id='thirdSection'>
-            <ContactPage/>
-        </section>
+            <div className='arrowUpContainer'>
+                <div ref={arrowRef} className={`arrowScroll ${isFullyScrolled ? 'hideArrow' : ''}`}
+                     onClick={() => validScrollToSection('firstSection')}>⌄
+                </div>
 
-        <div className='arrowUpContainer'>
-        <div ref={arrowRef} className={`arrowScroll ${ isFullyScrolled ? 'hideArrow' : '' }`} onClick={() => validScrollToSection('firstSection')}>⌄</div>
-
-        </div>
+            </div>
         </>
-        
+
     );
-};
+}
 
 export default Sections;

@@ -1,4 +1,4 @@
-#homeContainer{
+#homeContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
 }
 
 #textPicRow {
-    min-width:90vw;
+    min-width: 90vw;
 }
 
 #textContainer {
@@ -18,7 +18,7 @@
     text-align: left;
     /* height: 80%; */
     min-height: fit-content;
-    padding-top:40px;
+    padding-top: 40px;
 }
 
 #imageIconsContainer {
@@ -41,11 +41,11 @@
     font-size: 1em;
 }
 
-.myName{
+.myName {
     font-size: 4em;
 }
 
-.aboutMeMSG{
+.aboutMeMSG {
     font-size: 2em;
     margin-bottom: 10px;
 }
@@ -65,9 +65,9 @@
         padding-top: 20vh;
         z-index: 1;
     }
-    
+
     #textPicRow {
-        min-width:90vw;
+        min-width: 90vw;
     }
 
     #textContainer {
@@ -77,9 +77,9 @@
         align-items: center;
         text-align: center;
         min-height: fit-content;
-        padding-top:0px;
+        padding-top: 0px;
     }
-    
+
     #imageIconsContainer {
         position: relative;
         display: flex;
@@ -87,29 +87,29 @@
         align-items: center;
         padding: 0px;
     }
-    
+
     .empty {
         display: none;
     }
-    
+
     .typingContainer {
         margin-bottom: 5px;
     }
-    
+
     .title {
         font-size: 1em;
     }
-    
+
     .myName {
         font-size: 4em;
-    
+
     }
-    
+
     .aboutMeMSG {
         font-size: 2em;
         margin-bottom: 10px;
     }
-    
+
     .information {
         font-size: 1em;
     }
@@ -118,6 +118,10 @@
 
 /* Phone settings*/
 @media (max-width: 450px) {
+    #homeContainer {
+        padding-top: 15vh;
+    }
+
     #textPicRow {
         position: relative;
         display: flex;
@@ -152,7 +156,7 @@
         border-color: black;
     }
 
-    #imageIconsContainer {   
+    #imageIconsContainer {
         position: relative;
         display: flex;
         align-items: center; /* Control vertical position*/
@@ -165,17 +169,17 @@
     .title {
         font-size: 1em;
     }
-    
+
     .myName {
         font-size: 3em;
         font-weight: bold;
     }
-    
+
     .aboutMeMSG {
         font-size: 1.3em;
         margin-bottom: 10px;
     }
-    
+
     .information {
         font-size: 1em;
     }
